@@ -1,11 +1,11 @@
 <template>
-	<div class="w-48 text-grey-darker">
+	<div class="flex flex-col w-48 text-grey-darker">
 		<search-box v-model="searchTerm" @focus="show = true" @blur="hide" />
 		<transition name="fade">
 			<search-list
 				v-if="show"
 				:value="searchTerm"
-				class="absolute w-auto max-w-sm right-0 bg-white p-0 rounded mr-6 overflow-y-auto z-50"
+				class="absolute right-0 z-50 w-auto max-w-sm p-0 mr-6 overflow-y-auto bg-white rounded"
 				style="min-width: 192px; max-height: 90vh;"
 			/>
 		</transition>

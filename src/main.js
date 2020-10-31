@@ -7,6 +7,8 @@ import VueScrollTo from "vue-scrollto"
 import vSelect from "vue-select"
 import "~/assets/scss/main.scss"
 
+import InstantSearch from 'vue-instantsearch';
+
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout)
@@ -16,6 +18,8 @@ export default function(Vue, { router, head, isClient }) {
 
   // Vue.use(VueTheMask)
 
+  Vue.use(InstantSearch);
+  
   Vue.use(VueScrollTo, {
     duration: 500,
     easing: "ease",

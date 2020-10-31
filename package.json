@@ -13,6 +13,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/source-graphql": "^0.1.0",
     "@gridsome/transformer-remark": "^0.6.2",
+    "algoliasearch": "^4.5.1",
     "babel-runtime": "^6.26.0",
     "gridsome": "^0.7.20",
     "gridsome-plugin-flexsearch": "^1.0.4",
@@ -22,6 +23,7 @@
     "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
     "gridsome-plugin-robots": "^0.2.1",
+    "instantsearch.css": "^7.4.5",
     "mobile-device-detect": "^0.4.3",
     "moment": "^2.27.0",
     "postcss-import": "^12.0.1",
@@ -30,6 +32,7 @@
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "vue-fixed-header": "^3.2.14",
+    "vue-instantsearch": "^3.4.2",
     "vue-markdown": "^2.2.4",
     "vue-scrollto": "^2.18.1",
     "vue-select": "^3.10.8"

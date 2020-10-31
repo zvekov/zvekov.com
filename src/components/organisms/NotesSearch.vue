@@ -1,29 +1,46 @@
 <template>
   <div>
-    <input
-      v-model="query"
-      class="w-full px-3 py-1 mb-8 text-base border border-gray-700 rounded-md md:w-2/3 pointer"
-      :placeholder="$t('organisms.search.placeholder')"
-      type="search"
-    />
-    <div v-if="query">
+    <ais-instant-search :search-client="searchClient" index-name="prod_Notes">
+      <ais-search-box
+        class="w-full mb-8 text-base border border-gray-700 rounded-md md:w-2/3 pointer"
+        :placeholder="$t('organisms.search.placeholder')"
+        type="search"
+      />
       <div>
-        <div
-          v-for="note in $static.strapi.notes"
-          :key="note.slug"
-          class="w-full"
-        >
-          <g-link :to="'/notes/' + note.slug + '/'">
-            <div>
-              <p>{{ note.name }}</p>
-            </div>
-          </g-link>
+        <div>
+          <ais-hits>
+            <template slot="item" slot-scope="{ item }">
+              <p>
+                <g-link :to="'/notes/' + item.slug">
+                  <ais-highlight :hit="item" attribute="name" />
+                </g-link>
+              </p>
+            </template>
+          </ais-hits>
+        </div>
+        <!-- <div v-if="item.length == 0">
+          <p>{{ $t("organisms.search.not_found") }}</p>
+        </div> -->
+      </div>
+    </ais-instant-search>
+    <!-- <ais-instant-search :search-client="searchClient" index-name="prod_Notes">
+      <div class="search-panel">
+        <div class="search-panel__results"> -->
+    <!-- <ais-search-box placeholder="Search here…" class="searchbox" /> -->
+    <!-- <ais-hits>
+            <template slot="item" slot-scope="{ item }">
+              <p>
+                <g-link :to="'/notes/' + item.slug">
+                  <ais-highlight :hit="item" attribute="name" />
+                </g-link>
+              </p>
+            </template>
+          </ais-hits> -->
+
+    <!-- <div class="pagination"><ais-pagination /></div>
         </div>
       </div>
-      <div v-if="filteredList.length == 0">
-        <p>{{ $t("organisms.search.not_found") }}</p>
-      </div>
-    </div>
+    </ais-instant-search> -->
   </div>
 </template>
 <static-query>
@@ -38,9 +55,34 @@
   }
 </static-query>
 <script>
+import "instantsearch.css/themes/algolia-min.css";
+import algoliasearch from "algoliasearch/lite";
+import {
+  createInstantSearch,
+  AisInstantSearchSsr,
+  AisStateResults,
+  AisInfiniteHits,
+  AisHighlight,
+  AisConfigure,
+  AisSearchBox,
+  AisPoweredBy,
+} from "vue-instantsearch";
 export default {
+  components: {
+    AisPoweredBy,
+    AisSearchBox,
+    AisConfigure,
+    AisHighlight,
+    AisInfiniteHits,
+    AisStateResults,
+    AisInstantSearchSsr,
+  },
   data() {
     return {
+      searchClient: algoliasearch(
+        "HID8CLPPRG",
+        "8e6784f9d6376600c998128bb3f713ae"
+      ),
       notes: [],
       query: "",
     };
@@ -54,12 +96,18 @@ export default {
   },
 };
 </script>
-<style lang="postcss" scoped>
-input::placeholder {
+<style lang="postcss">
+[type="search"] {
+  appearance: none;
+}
+.ais-SearchBox-input {
+  @apply border-0;
+}
+.ais-SearchBox-form input::placeholder {
   @apply opacity-100;
   color: #38485a;
 }
-input:placeholder-shown {
+.ais-SearchBox-form input:placeholder-shown {
   @apply opacity-100;
   color: #38485a;
 }

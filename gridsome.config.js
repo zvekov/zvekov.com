@@ -1,3 +1,4 @@
+
 module.exports = {
   siteName: "Yury Zvekov",
   siteUrl: process.env.APP_URL || "https://zvekov.com",
@@ -74,16 +75,8 @@ module.exports = {
         collections: [
           {
             indexName: "Note",
-            query: `{
-              strapi {
-                notes {
-                  name
-                  content
-                  slug
-                }
-              }
-            }`,
-            path: "strapi.notes.slug",
+            query: `{ strapi { notes { name, content, slug }}}`,
+            path: 'notes.nodes'
           },
         ],
       },
