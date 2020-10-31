@@ -7,3 +7,4 @@ dist
 .nowignore
 yarn.lock
 /src/.temp
+.vercel
