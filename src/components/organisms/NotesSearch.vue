@@ -2,7 +2,7 @@
   <div>
     <input
       v-model="query"
-      class="mb-8 border border-gray-700 rounded-md px-3 py-1 w-full md:w-2/3 pointer text-base"
+      class="w-full px-3 py-1 mb-8 text-base border border-gray-700 rounded-md md:w-2/3 pointer"
       :placeholder="$t('organisms.search.placeholder')"
       type="search"
     />
@@ -33,7 +33,6 @@
         slug
         name
         content
-        published_at
       }
 	  }
   }

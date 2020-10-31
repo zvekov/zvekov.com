@@ -9,10 +9,11 @@
           </h1>
           <div class="flex items-center justify-between w-full pb-4">
             <div
-              v-if="$page.strapi.notes[0].published_at"
+              v-if="$page.strapi.notes[0].updated_at"
               class="text-base opacity-50"
             >
-              {{ $page.strapi.notes[0].published_at | dateFormat }}
+              updated:
+              {{ $page.strapi.notes[0].updated_at | dateFormat }}
             </div>
             <div>
               <YandexShare />
@@ -35,7 +36,7 @@
         slug
         name
         content
-        published_at
+        updated_at
       }
 	  }
   }
@@ -52,7 +53,7 @@ export default {
   },
   filters: {
     dateFormat(date) {
-      return moment(date).format("DD MMMM YYYY");
+      return moment(date).format("DD.MM.YYYY");
     },
   },
 
@@ -135,7 +136,7 @@ export default {
   overflow-x: auto;
 } */
 .content pre {
-  @apply bg-blue-900 text-white overflow-x-auto p-4 rounded-md mb-4 text-xs font-monospace;
+  @apply bg-blue-900 text-white overflow-x-auto px-6 py-4 rounded-md mb-4 text-code font-monospace;
 }
 
 .content a {
