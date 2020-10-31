@@ -1,0 +1,8 @@
+.cache
+.now
+node_modules
+dist
+.now
+.env
+.nowignore
+
