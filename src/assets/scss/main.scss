@@ -1,0 +1,56 @@
+/*! purgecss start ignore */
+
+@import "vue-select/src/scss/vue-select.scss";
+
+@tailwind base;
+
+a,
+button {
+  cursor: pointer;
+}
+code,
+kbd,
+pre,
+samp {
+  @apply text-white;
+}
+h1,
+h2 {
+  @apply py-3 leading-tight;
+}
+
+h1::before,
+h2::before {
+  @apply pr-2;
+  content: "#";
+}
+
+h3 {
+  @apply font-bold pr-2;
+}
+body {
+  @apply font-body;
+  color: #34485c;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.1s;
+}
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}
+
+/*! purgecss end ignore */
+
+@import "base/all";
+
+@tailwind components;
+
+@import "components/all";
+
+@tailwind utilities;

@@ -1,0 +1,76 @@
+{
+  "gender": "mâle",
+  "height": "173 voir",
+  "city": "Zhlobin",
+  "region": "Région de Gomel",
+  "country": "Biélorussie",
+  "bithplace": "Zhlobin",
+  "nationality": "Biélorussie",
+  "homepage": "Accueil",
+  "not_found": "Page non trouvée!",
+  "atoms": {
+    "name": "Yuri Zvekov",
+    "profession": "Développeur JAMstack",
+    "links": {
+      "about": "À propos de",
+      "contact": "Contact",
+      "notes": "Remarques"
+    }
+  },
+  "organisms": {
+    "about_text": {
+      "title": "À propos de moi",
+      "text": "<p>Je crée des sites rapides et pratiques à l’aide des outils avancés de JAMstack.</p><p>Selon l’expérience, les générateurs statiques associés aux headlees CMS donnent de bons résultats pour les sites PWA et SPA. Ces sites sont rapides par défaut.</p><p>J’utilise les frameworks JS, CSS et PHP pour la mise en oeuvre de tâches.</p><p>Je préfère les solutions open source, mais j'utilise aussi le développement payant.</p><p>Vue et Laravel est un guide pour développer mes compétences.</p>"
+    },
+    "works": {
+      "title": "Travaux"
+    },
+    "messanagers": {
+      "title": "Entrer en contact",
+      "for_contact": "Pour me contacter, utilisez l'un des messagers.",
+      "best": "De préférence – Télégramme.",
+      "click": "*Cliquez sur l'icône pour démarrer le dialogue."
+    },
+    "task": {
+      "title": "Vous avez une tâche?",
+      "text": "Remplissez un simple brief sous la forme d'une enquête pour comprendre le problème et le dialogue productif qui s'ensuit.",
+      "btn": "Remplissez brief"
+    },
+    "search": {
+      "title": "Remarques",
+      "text": "Auparavant, il était partout: dans le navigateur, le smartphone, les services, les cahiers et les autocollants. Maintenant, je le laisse ici.",
+      "placeholder": "Plusieurs caractères à rechercher...",
+      "not_found": "Notes not found! Research...",
+      "latest": "Latest"
+    }
+  },
+  "pages": {
+    "index": {
+      "meta": {
+        "desc": "Bonjour! Je m'appelle Yuri Zvekov (biélorusse: Zvekau) et je suis développeur full-stack. Je crée des sites, SPA et PWA en utilisant les outils JAMstack."
+      }
+    },
+    "about": {
+      "title": "À propos de moi",
+      "meta": {
+        "desc": "Bonjour! Je m'appelle Yuri Zvekov (biélorusse: Zvekau) et je suis développeur full-stack. Je crée des sites, SPA et PWA en utilisant les outils JAMstack."
+      }
+    },
+    "contact": {
+      "title": "Entrer en contact",
+      "meta": {
+        "desc": "Bonjour! Je m'appelle Yuri Zvekov (biélorusse: Zvekau) et je suis développeur full-stack. Je crée des sites, SPA et PWA en utilisant les outils JAMstack."
+      }
+    },
+    "notes": {
+      "title": "Remarques",
+      "meta": {
+        "desc": "Bonjour! Je m'appelle Yuri Zvekov (biélorusse: Zvekau) et je suis développeur full-stack. Je crée des sites, SPA et PWA en utilisant les outils JAMstack."
+      }
+    },
+    "briefing": {
+      "title": "Remplissez brief",
+      "loading": "Chargement brief..."
+    }
+  }
+}

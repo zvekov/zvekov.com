@@ -1,0 +1,16 @@
+{
+  "name": "zvekov.com",
+  "scope": "zvekov",
+  "github": { "enabled": true },
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 404, "dest": "404" }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ]
+}
