@@ -5,4 +5,5 @@ dist
 .now
 .env
 .nowignore
-
+yarn.lock
+src/.temp
