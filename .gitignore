@@ -6,4 +6,4 @@ dist
 .env
 .nowignore
 yarn.lock
-src/.temp
+/src/.temp
