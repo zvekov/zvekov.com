@@ -589,7 +589,7 @@ a[class^="ais-"] {
 .ais-InfiniteHits-item,
 .ais-InfiniteResults-item,
 .ais-Results-item {
-  @apply w-full mx-4 my-2;
+  @apply w-full mx-4;
 }
 .ais-Panel-body .ais-Hits-item,
 .ais-Panel-body .ais-InfiniteHits-item,
