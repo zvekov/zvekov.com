@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <Layout>
+  <Note>
     <div class="max-w-2xl mx-auto">
       <section class="px-4 pb-8">
         <div class="flex flex-wrap pb-8">
@@ -27,7 +27,7 @@
         </div>
       </section>
     </div>
-  </Layout>
+  </Note>
 </template>
 <page-query>
   query ($slug: String!) {
@@ -42,6 +42,7 @@
   }
 </page-query>
 <script>
+import Note from "~/layouts/Note";
 import moment from "moment";
 import VueMarkdown from "vue-markdown";
 import YandexShare from "~/components/atoms/YandexShare";

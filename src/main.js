@@ -3,6 +3,7 @@
 import DefaultLayout from "~/layouts/Default.vue"
 import FullscreenLayout from "~/layouts/Fullscreen.vue"
 import HomepageLayout from "~/layouts/Homepage.vue"
+import Note from "~/layouts/Note.vue"
 import VueScrollTo from "vue-scrollto"
 import vSelect from "vue-select"
 import "~/assets/scss/main.scss"
@@ -14,6 +15,7 @@ export default function(Vue, { router, head, isClient }) {
   Vue.component("Layout", DefaultLayout)
   Vue.component("Fullscreen", FullscreenLayout)
   Vue.component("Homepage", HomepageLayout)
+  Vue.component("Note", Note)
   Vue.component("v-select", vSelect)
 
   // Vue.use(VueTheMask)

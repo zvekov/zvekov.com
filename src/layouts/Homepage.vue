@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div class="text-base xs:text-lg">
-      <transition name="fade" appear>
-        <main>
-          <slot />
-        </main>
-      </transition>
-    </div>
+  <div class="text-base xs:text-lg">
+    <transition name="fade" appear>
+      <main>
+        <slot />
+      </main>
+    </transition>
   </div>
 </template>
 <script>

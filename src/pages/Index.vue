@@ -6,23 +6,25 @@
       <span>
         <g-image src="~/assets/img/logo.jpg" :alt="$t('atoms.name')" />
       </span>
-      <Name class="text-xl xs:text-2xl font-semibold pt-2" />
+      <Name class="pt-2 text-xl font-semibold xs:text-2xl" />
       <Profession class="pb-4 text-base xs:text-lg" />
-      <Navigation class="lowercase flex text-base xs:text-lg" />
-      <div class="fixed bottom-0 right-0 pr-4 pb-3">
+      <Navigation class="flex text-base lowercase xs:text-lg" />
+      <div class="fixed bottom-0 right-0 pb-3 pr-4">
         <Pogonya />
       </div>
     </div>
   </Homepage>
 </template>
 <script>
-import Pogonya from "@/components/atoms/Pogonya"
-import Logo from "@/components/atoms/Logo"
-import Name from "@/components/atoms/Name"
-import Profession from "@/components/atoms/Profession"
-import Navigation from "@/components/molecules/Navigation"
+import Homepage from "~/layouts/Homepage.vue";
+import Pogonya from "@/components/atoms/Pogonya";
+import Logo from "@/components/atoms/Logo";
+import Name from "@/components/atoms/Name";
+import Profession from "@/components/atoms/Profession";
+import Navigation from "@/components/molecules/Navigation";
 export default {
   components: {
+    Homepage,
     Logo,
     Name,
     Profession,
@@ -54,7 +56,7 @@ export default {
         //   content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
         // },
       ],
-    }
+    };
   },
   // jsonld() {
   //   return {
@@ -87,7 +89,7 @@ export default {
   //     telephone: "+375 (33) 604-54-54",
   //   }
   // },
-}
+};
 </script>
 <style scoped>
 img {

@@ -10,7 +10,7 @@
 
         <div class="flex justify-end mt-2 ml-2/3 ais-PoweredBy">
           <a
-            href="https://www.algolia.com/?utm_source=vue-instantsearch&amp;utm_medium=website&amp;utm_content=localhost&amp;utm_campaign=poweredby"
+            href="https://www.algolia.com/?utm_source=vue-instantsearch&amp;utm_medium=website&amp;utm_content=zvekov.com&amp;utm_campaign=poweredby"
             target="_blank"
             rel="noopener"
             aria-label="search by Algolia"
@@ -43,8 +43,15 @@
         <ais-state-results>
           <template slot-scope="{ state: { query } }">
             <ais-hits v-show="query.length > 0">
-              <div slot="item" slot-scope="{ item }" class="py-2 text-lg">
-                <g-link :to="'/notes/' + item.slug" class="hover:text-red-700">
+              <div
+                slot="item"
+                slot-scope="{ item }"
+                class="py-1 text-base xs:text-lg xs:py-2"
+              >
+                <g-link
+                  :to="'/notes/' + item.slug + '/'"
+                  class="hover:text-red-700"
+                >
                   {{ item.name }}
                 </g-link>
               </div>

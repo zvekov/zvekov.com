@@ -69,19 +69,6 @@ module.exports = {
       },
     },
     {
-      use: "gridsome-plugin-flexsearch",
-      options: {
-        searchFields: ["name", "content"],
-        collections: [
-          {
-            indexName: "Note",
-            query: `{ strapi { notes { name, content, slug }}}`,
-            path: 'notes.nodes'
-          },
-        ],
-      },
-    },
-    {
       use: "gridsome-plugin-tailwindcss",
       options: {
         tailwindConfig: "./tailwind.config.js",
@@ -164,7 +151,7 @@ module.exports = {
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: "/manifest.json",
         title: "Yury Zvekov",
-        startUrl: "/",
+        startUrl: "/notes/",
         display: "standalone",
         statusBarStyle: "default",
         themeColor: "#ffffff",
