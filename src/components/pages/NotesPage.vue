@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import NotesSearch from "@/components/organisms/NotesSearch"
+import NotesSearch from "@/components/organisms/NotesSearch";
 // import notesQuery from '@/apollo/queries/note/notes'
 export default {
   components: {
@@ -30,5 +30,5 @@ export default {
   //       fetchPolicy: 'cache-and-network',
   //     },
   //   },
-}
+};
 </script>

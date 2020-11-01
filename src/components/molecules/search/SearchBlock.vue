@@ -8,24 +8,17 @@
           type="search"
         />
         <AisPoweredBy class="flex justify-end mt-2 ml-2/3" />
+        <SearchResults></SearchResults>
       </div>
       <div>
-        <ais-state-results>
-          <template slot-scope="{ state: { query } }">
-            <ais-hits v-show="query.length > 0">
-              <div slot="item" slot-scope="{ item }">
-                <g-link :to="'/notes/' + item.slug">
-                  {{ item.name }}
-                </g-link>
-              </div>
-            </ais-hits>
-          </template>
-        </ais-state-results>
+        <div></div>
       </div>
     </ais-instant-search>
   </div>
 </template>
 <script>
+// import "instantsearch.css/themes/algolia-min.css";
+import SearchResults from "./SearchResults";
 import algoliasearch from "algoliasearch/lite";
 import {
   createInstantSearch,
@@ -39,6 +32,7 @@ import {
 } from "vue-instantsearch";
 export default {
   components: {
+    SearchResults,
     AisPoweredBy,
     AisSearchBox,
     AisConfigure,
@@ -49,7 +43,6 @@ export default {
   },
   data() {
     return {
-      AisStateResults: null,
       searchClient: algoliasearch(
         "HID8CLPPRG",
         "8e6784f9d6376600c998128bb3f713ae"
@@ -67,12 +60,10 @@ export default {
 </script>
 <style lang="postcss">
 .ais-PoweredBy-logo {
-  @apply opacity-60;
-  width: 6rem !important;
+  width: 100px !important;
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-}
-.ais-PoweredBy-logo:hover {
-  filter: grayscale(0%);
+  opacity: 0.6;
 }
 .ais-Breadcrumb-list,
 .ais-CurrentRefinements-list,
