@@ -8,7 +8,7 @@ module.exports = {
     content: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
     options: {
       defaultExtractor: (content) => content.match(/[\w-/:%]+(?<!:)/g) || [],
-      whitelistPatterns: [/hooper/],
+      safelist: [/hooper/, /ais-$/],
     },
   },
   prefix: "",
