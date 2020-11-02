@@ -1,5 +1,5 @@
 <template>
-  <div class="text-base xs:text-lg h-screen">
+  <div class="h-screen text-base xs:text-lg">
     <HeaderPartial />
     <transition name="fade" appear>
       <main>
@@ -7,9 +7,9 @@
       </main>
     </transition>
     <LocaleSwitcher
-      class="md:flex bottom-0 left-0 md:mb-3 pl-2 md:ml-4 hidden md:fixed"
+      class="bottom-0 left-0 hidden pl-2 md:flex md:mb-3 md:ml-4 md:fixed"
     />
-    <Pogonya class="fixed bottom-0 right-0 mr-4 mb-3" style="z-index: -1" />
+    <Pogonya class="fixed bottom-0 right-0 mb-3 mr-4" style="z-index: -1" />
   </div>
 </template>
 <script>
@@ -24,6 +24,9 @@ export default {
   },
   metaInfo() {
     return {
+      bodyAttrs: {
+        class: "default",
+      },
       link: [
         {
           rel: "canonical",

@@ -24,6 +24,9 @@ export default {
   },
   metaInfo() {
     return {
+      bodyAttrs: {
+        class: "default",
+      },
       link: [
         {
           rel: "canonical",

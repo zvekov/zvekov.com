@@ -1,16 +1,16 @@
 <template>
-  <div class="leading-tight flex flex-col justify-center">
-    <Name class="text-xl xs:text-2xl font-semibold" />
-    <Profession class="text-base xs:text-lg opacity-50" />
+  <div class="flex flex-col justify-center leading-tight">
+    <div class="text-xl font-semibold xs:text-2xl">{{ $t("atoms.name") }}</div>
+    <Profession class="text-base opacity-50 xs:text-lg" />
   </div>
 </template>
 <script>
-import Name from '@/components/atoms/Name'
-import Profession from '@/components/atoms/Profession'
+import Name from "@/components/atoms/Name";
+import Profession from "@/components/atoms/Profession";
 export default {
   components: {
     Name,
     Profession,
   },
-}
+};
 </script>

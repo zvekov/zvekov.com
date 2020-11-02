@@ -6,7 +6,9 @@
       <span>
         <g-image src="~/assets/img/logo.jpg" :alt="$t('atoms.name')" />
       </span>
-      <Name class="pt-2 text-xl font-semibold xs:text-2xl" />
+      <h1 class="text-xl font-semibold autpt-2 xs:text-2xl name">
+        {{ $t("atoms.name") }}
+      </h1>
       <Profession class="pb-4 text-base xs:text-lg" />
       <Navigation class="flex text-base lowercase xs:text-lg" />
       <div class="fixed bottom-0 right-0 pb-3 pr-4">
@@ -19,14 +21,12 @@
 import Homepage from "~/layouts/Homepage.vue";
 import Pogonya from "@/components/atoms/Pogonya";
 import Logo from "@/components/atoms/Logo";
-import Name from "@/components/atoms/Name";
 import Profession from "@/components/atoms/Profession";
 import Navigation from "@/components/molecules/Navigation";
 export default {
   components: {
     Homepage,
     Logo,
-    Name,
     Profession,
     Navigation,
     Pogonya,

@@ -3,14 +3,14 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: {
-    layers: ["utilities"],
-    content: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
-    options: {
-      defaultExtractor: (content) => content.match(/[\w-/:%]+(?<!:)/g) || [],
-      safelist: [/hooper/, /ais-$/],
-    },
-  },
+  // purge: {
+  //   layers: ["utilities"],
+  //   content: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
+  //   options: {
+  //     defaultExtractor: (content) => content.match(/[\w-/:%]+(?<!:)/g) || [],
+  //     safelist: [/hooper/, /ais-$/],
+  //   },
+  // },
   prefix: "",
   important: false,
   separator: ":",

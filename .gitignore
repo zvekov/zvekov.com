@@ -1,10 +1,7 @@
 .cache
-.now
 node_modules
 dist
-.now
+.vercel
 .env
 .nowignore
-yarn.lock
 /src/.temp
-.vercel

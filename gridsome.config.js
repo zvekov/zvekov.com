@@ -72,7 +72,9 @@ module.exports = {
       use: "gridsome-plugin-tailwindcss",
       options: {
         tailwindConfig: "./tailwind.config.js",
-        purgeConfig: {},
+        purgeConfig: {
+          safelist: [/hooper/, /ais-$/],
+        },
         presetEnvConfig: {},
         shouldPurge: true,
         shouldImport: true,
@@ -138,7 +140,6 @@ module.exports = {
         ],
       },
     },
-
     {
       use: "gridsome-plugin-pwa",
       options: {
