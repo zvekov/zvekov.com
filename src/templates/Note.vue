@@ -30,9 +30,9 @@
       </div>
       <div
         v-if="$page.strapi.notes[0].usefulLinks.length !== 0"
-        class="px-4 pb-8 lg:left-0 lg:px-16 lg:fixed"
+        class="px-4 pb-8 lowercase lg:left-0 lg:px-16 lg:fixed"
       >
-        <div class="font-black lowercase">Useful Links</div>
+        <div class="font-black">Useful Links</div>
         <ul>
           <li
             v-for="link in $page.strapi.notes[0].usefulLinks"
@@ -65,9 +65,9 @@
       </div>
       <div
         v-if="$page.strapi.notes[0].similar.length !== 0"
-        class="px-4 pb-8 lg:px-16 lg:right-0 lg:fixed"
+        class="px-4 pb-8 lowercase lg:px-16 lg:right-0 lg:fixed"
       >
-        <div class="font-black lowercase" v-if="$page.strapi.notes[0].similar">
+        <div class="font-black" v-if="$page.strapi.notes[0].similar">
           Similar Notes
         </div>
         <ul>
