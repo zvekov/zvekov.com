@@ -1,7 +1,7 @@
 
 module.exports = {
   siteName: "Yury Zvekov",
-  siteUrl: process.env.APP_URL || "https://zvekov.com",
+  siteUrl: process.env.APP_URL,
   plugins: [
     {
       use: "gridsome-plugin-i18n",
@@ -38,7 +38,7 @@ module.exports = {
     {
       use: "@gridsome/source-graphql",
       options: {
-        url: "https://zvekov.herokuapp.com/graphql",
+        url: process.env.API_URL,
         fieldName: "strapi",
         typeName: "strapiTypes",
         remark: {
@@ -72,14 +72,14 @@ module.exports = {
       use: "gridsome-plugin-tailwindcss",
       options: {
         tailwindConfig: "./tailwind.config.js",
-        purgeConfig: {
-          safelist: [/hooper/, /ais-$/],
-        },
-        presetEnvConfig: {},
-        shouldPurge: true,
-        shouldImport: true,
-        shouldTimeTravel: true,
-        shouldPurgeUnusedKeyframes: true,
+      //   purgeConfig: {
+      //     safelist: [/hooper/, /ais-$/],
+      //   },
+      //   presetEnvConfig: {},
+      //   shouldPurge: true,
+      //   shouldImport: true,
+      //   shouldTimeTravel: true,
+      //   shouldPurgeUnusedKeyframes: true,
       },
     },
     {

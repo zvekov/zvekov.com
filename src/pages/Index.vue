@@ -24,6 +24,7 @@ import Logo from "@/components/atoms/Logo";
 import Profession from "@/components/atoms/Profession";
 import Navigation from "@/components/molecules/Navigation";
 export default {
+  layout: "fullscreen",
   components: {
     Homepage,
     Logo,

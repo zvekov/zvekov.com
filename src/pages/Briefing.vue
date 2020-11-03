@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center w-full h-screen">
       <div class="absolute">{{ $t("pages.briefing.loading") }}</div>
       <Briefing class="z-30" />
-      <div class="fixed bottom-0 right-0 pr-4 pb-3">
+      <div class="fixed bottom-0 right-0 pb-3 pr-4">
         <Pogonya />
       </div>
     </div>
@@ -13,7 +13,7 @@
 import Briefing from "~/components/atoms/briefing/Briefing";
 import Pogonya from "@/components/atoms/Pogonya";
 export default {
-  layout: "fullscreen",
+  layout: "Fullscreen",
   components: {
     Briefing,
     Pogonya,

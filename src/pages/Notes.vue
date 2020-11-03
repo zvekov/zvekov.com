@@ -1,22 +1,16 @@
 <template>
   <Layout>
     <NotesPage />
-    <div class="fixed bottom-0 right-0 pr-4 pb-3">
-      <Pogonya />
-    </div>
   </Layout>
 </template>
 <script>
-import NotesPage from "~/components/pages/NotesPage"
-import Pogonya from "@/components/atoms/Pogonya"
+import NotesPage from "~/components/pages/NotesPage";
 export default {
   components: {
     NotesPage,
-    Pogonya,
   },
   data() {
     return {
-      // moment: moment,
       jsonld: {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -39,7 +33,7 @@ export default {
           },
         ],
       },
-    }
+    };
   },
   metaInfo() {
     return {
@@ -67,7 +61,7 @@ export default {
         //   content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
         // },
       ],
-    }
+    };
   },
-}
+};
 </script>

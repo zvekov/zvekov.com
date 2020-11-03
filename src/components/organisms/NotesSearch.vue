@@ -63,6 +63,8 @@
   </div>
 </template>
 <script>
+const ALGOLIA_ID = process.env.ALGOLIA_ID;
+
 import algoliasearch from "algoliasearch/lite";
 import {
   createInstantSearch,
@@ -86,6 +88,7 @@ export default {
   },
   data() {
     return {
+      ALGOLIA_ID: process.env.ALGOLIA_ID,
       AisStateResults: null,
       searchClient: algoliasearch(
         "HID8CLPPRG",
