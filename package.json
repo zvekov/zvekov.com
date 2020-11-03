@@ -23,7 +23,6 @@
     "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
     "gridsome-plugin-robots": "^0.2.1",
-    "gridsome-plugin-svg": "^0.0.14",
     "gridsome-plugin-tailwindcss": "^3.0.1",
     "instantsearch.css": "^7.4.5",
     "mobile-device-detect": "^0.4.3",
@@ -41,6 +40,7 @@
     "vue-select": "^3.10.8"
   },
   "devDependencies": {
-    "@alexlit/vue-yandex-share": "^1.0.1"
+    "@alexlit/vue-yandex-share": "^1.0.1",
+    "gridsome-plugin-svg": "^0.0.14"
   }
 }

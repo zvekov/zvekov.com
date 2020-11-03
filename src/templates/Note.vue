@@ -1,31 +1,86 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <Note>
-    <div class="max-w-2xl mx-auto">
-      <section class="px-4 pb-8">
-        <div class="flex flex-wrap pb-8">
-          <h1 v-if="$page.strapi.notes[0].name" class="text-2xl font-bold">
-            {{ $page.strapi.notes[0].name }}
-          </h1>
-          <div class="flex items-center justify-between w-full pb-4">
-            <div
-              v-if="$page.strapi.notes[0].updated_at"
-              class="text-base opacity-50"
-            >
-              updated:
-              {{ $page.strapi.notes[0].updated_at | dateFormat }}
+    <div>
+      <div class="max-w-2xl mx-auto">
+        <section class="px-4 pb-8">
+          <div class="flex flex-wrap pb-8">
+            <h1 v-if="$page.strapi.notes[0].name" class="text-2xl font-bold">
+              {{ $page.strapi.notes[0].name }}
+            </h1>
+            <div class="flex items-center justify-between w-full pb-4">
+              <div
+                v-if="$page.strapi.notes[0].updated_at"
+                class="text-base opacity-50"
+              >
+                updated:
+                {{ $page.strapi.notes[0].updated_at | dateFormat }}
+              </div>
+              <div>
+                <YandexShare />
+              </div>
             </div>
-            <div>
-              <YandexShare />
-            </div>
+            <VueMarkdown
+              v-if="$page.strapi.notes[0].content"
+              :source="$page.strapi.notes[0].content"
+              class="w-full pb-4 content"
+            />
           </div>
-          <VueMarkdown
-            v-if="$page.strapi.notes[0].content"
-            :source="$page.strapi.notes[0].content"
-            class="w-full pb-4 content"
-          />
+        </section>
+      </div>
+      <div
+        v-if="$page.strapi.notes[0].usefulLinks.length !== 0"
+        class="px-4 pb-8 lg:left-0 lg:px-16 lg:fixed"
+      >
+        <div class="font-black lowercase">Useful Links</div>
+        <ul>
+          <li
+            v-for="link in $page.strapi.notes[0].usefulLinks"
+            v-bind:key="link.id"
+          >
+            <a :href="link.url" target="_blank" class="flex items-center">
+              <!-- {{ link.resource }} -->
+              <span
+                v-if="link.resource == 'github'"
+                class="flex justify-end w-6 mr-2"
+              >
+                <IconGithub class="w-4 h-4 mt-0" />
+              </span>
+              <span
+                v-if="link.resource == 'npm'"
+                class="flex justify-end w-6 mr-2"
+              >
+                <IconNpm class="w-6 h-6 mt-1" />
+              </span>
+              <span v-if="link.resource == 'bitbucket'"> bitbucketicon </span>
+              <span v-if="link.resource == 'codepen'"> codepenicon </span>
+              <span
+                v-if="link.resource == 'link'"
+                class="flex justify-end w-6 mr-2"
+              ></span>
+              {{ link.title }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        v-if="$page.strapi.notes[0].similar.length !== 0"
+        class="px-4 pb-8 lg:px-16 lg:right-0 lg:fixed"
+      >
+        <div class="font-black lowercase" v-if="$page.strapi.notes[0].similar">
+          Similar Notes
         </div>
-      </section>
+        <ul>
+          <li
+            v-for="note in $page.strapi.notes[0].similar"
+            v-bind:key="note.id"
+          >
+            <g-link :to="'/notes/' + note.slug" class="flex items-center">
+              {{ note.name }}
+            </g-link>
+          </li>
+        </ul>
+      </div>
     </div>
   </Note>
 </template>
@@ -37,6 +92,17 @@
         name
         content
         updated_at
+        usefulLinks {
+          id
+          title
+          url
+          resource
+        }
+        similar {
+          id
+          name
+          slug
+        }
       }
 	  }
   }
@@ -47,8 +113,14 @@ import moment from "moment";
 import VueMarkdown from "vue-markdown";
 import YandexShare from "~/components/atoms/YandexShare";
 
+// Resources Icons
+import IconNpm from "~/assets/svg/icon-npm.svg?inline";
+import IconGithub from "~/assets/svg/icon-github.svg?inline";
+
 export default {
   components: {
+    IconNpm,
+    IconGithub,
     VueMarkdown,
     YandexShare,
   },
@@ -57,7 +129,6 @@ export default {
       return moment(date).format("DD.MM.YYYY");
     },
   },
-
   data() {
     return {
       jsonld: {

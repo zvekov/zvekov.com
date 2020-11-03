@@ -185,6 +185,36 @@ module.exports = {
         //   appleMaskIconColor: "#666600", // Optional
       },
     },
+    {
+    use: 'gridsome-plugin-svg',
+    options: {
+    // default options below
+    goesBothWays: true,
+    svgo: [
+      {
+        removeTitle: false
+      },
+      // {
+      //   prefixIds: {
+      //     prefix: (_, {path}) => basename(path, '.svg'),
+      //     delim: '-',
+      //   },
+      // },
+      {
+        removeDesc: false
+      },
+      {
+        removeViewBox: false,
+      },
+      {
+        removeDimensions: true,
+      },
+      {
+        sortAttrs: true,
+      }
+      ],
+    }
+  }
   ],
   chainWebpack: (config) => {
     config.resolve.alias.set("@modules", "@/assets/js/modules")
