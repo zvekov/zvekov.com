@@ -33,6 +33,7 @@
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "tailwindcss-dark-mode": "^1.1.7",
+    "tailwindcss-filters": "^3.0.0",
     "vue-fixed-header": "^3.2.14",
     "vue-instantsearch": "^3.4.2",
     "vue-markdown": "^2.2.4",

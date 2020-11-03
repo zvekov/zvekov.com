@@ -3,32 +3,32 @@
   <Note>
     <div class="flex flex-wrap">
       <div
-        v-if="$page.strapi.notes[0].usefulLinks.length !== 0"
-        class="order-2 w-full max-w-2xl px-4 pb-4 mx-auto lowercase lg:pt-16 lg:left-0 lg:px-16 lg:fixed lg:w-auto"
+        v-if="$page.strapi.notes[0].usefulLinks.length > 0"
+        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase lg:pt-16 lg:left-0 lg:px-16 lg:fixed lg:w-auto"
       >
         <div class="font-black">Useful Links</div>
         <ul>
           <li
             v-for="link in $page.strapi.notes[0].usefulLinks"
             v-bind:key="link.id"
+            class="lg:opacity-50 lg:hover:opacity-100"
           >
             <a
               :href="link.url"
               target="_blank"
-              class="flex items-center hover:text-red-700"
+              class="flex items-center text-lg hover:text-red-700 lg:text-base"
             >
-              <!-- {{ link.resource }} -->
               <span
                 v-if="link.resource == 'github'"
                 class="flex justify-end w-6 mr-2"
               >
-                <IconGithub class="w-4 h-4 mt-0" />
+                <IconGithub class="w-4 h-4 mt-0 filter-grayscale" />
               </span>
               <span
                 v-if="link.resource == 'npm'"
                 class="flex justify-end w-6 mr-2"
               >
-                <IconNpm class="w-6 h-6 mt-1" />
+                <IconNpm class="w-6 h-6 mt-1 filter-grayscale" />
               </span>
               <span v-if="link.resource == 'bitbucket'"> bitbucketicon </span>
               <span v-if="link.resource == 'codepen'"> codepenicon </span>
@@ -42,8 +42,8 @@
         </ul>
       </div>
       <div
-        v-if="$page.strapi.notes[0].similar.length !== 0"
-        class="order-3 w-full max-w-2xl px-4 pb-4 mx-auto lowercase lg:pt-16 lg:px-16 lg:right-0 lg:fixed lg:w-auto"
+        v-if="$page.strapi.notes[0].similar.length > 0"
+        class="order-3 w-full max-w-2xl px-6 pb-4 mx-auto lowercase lg:pt-16 lg:px-16 lg:right-0 lg:fixed lg:w-auto"
       >
         <div class="font-black" v-if="$page.strapi.notes[0].similar">
           Similar Notes
@@ -52,10 +52,11 @@
           <li
             v-for="note in $page.strapi.notes[0].similar"
             v-bind:key="note.id"
+            class="lg:opacity-50 lg:hover:opacity-100"
           >
             <g-link
               :to="'/notes/' + note.slug"
-              class="flex items-center hover:text-red-700"
+              class="flex items-center text-lg hover:text-red-700 lg:text-base"
             >
               {{ note.name }}
             </g-link>
@@ -183,18 +184,18 @@ export default {
         { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
       ],
       meta: [
-        {
-          name: "description",
-          content: this.$page.strapi.articles[0].Seo.metaDescription,
-        },
-        {
-          property: "og:title",
-          content: this.$page.strapi.articles[0].Seo.metaTitle,
-        },
-        {
-          property: "og:description",
-          content: this.$page.strapi.articles[0].Seo.metaDescription,
-        },
+        // {
+        //   name: "description",
+        //   content: this.$page.strapi.articles[0].Seo.metaDescription,
+        // },
+        // {
+        //   property: "og:title",
+        //   content: this.$page.strapi.articles[0].Seo.metaTitle,
+        // },
+        // {
+        //   property: "og:description",
+        //   content: this.$page.strapi.articles[0].Seo.metaDescription,
+        // },
         //   {
         //     property: "og:image",
         //     content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
@@ -205,15 +206,6 @@ export default {
 };
 </script>
 <style lang="postcss">
-/* img {
-  width: 20rem;
-} */
-/* .hljs {
-  @apply mt-2 mb-4 w-full z-0 relative font-monospace;
-  font-size: 14px;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-} */
 .content pre {
   @apply bg-blue-900 text-white overflow-x-auto px-6 py-4 rounded-md mb-4 text-code font-monospace;
 }

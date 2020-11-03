@@ -8,7 +8,10 @@
           type="search"
         />
         <ClientOnly>
-          <ais-powered-by theme="light" class="flex justify-end mt-2 ml-2/3" />
+          <ais-powered-by
+            theme="light"
+            class="flex justify-end mt-2 ml-2/3 filter-grayscale"
+          />
         </ClientOnly>
       </div>
       <div>
@@ -80,10 +83,6 @@ export default {
 .ais-PoweredBy-logo {
   @apply opacity-60;
   width: 6rem !important;
-  filter: grayscale(100%);
-}
-.ais-PoweredBy-logo:hover {
-  filter: grayscale(0%);
 }
 .ais-Breadcrumb-list,
 .ais-CurrentRefinements-list,
