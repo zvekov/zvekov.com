@@ -38,7 +38,7 @@ module.exports = {
     {
       use: "@gridsome/source-graphql",
       options: {
-        url: process.env.API_URL,
+        url: "https://zvekov.herokuapp.com/graphql",
         fieldName: "strapi",
         typeName: "strapiTypes",
         remark: {
