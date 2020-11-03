@@ -1,36 +1,10 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <Note>
-    <div>
-      <div class="max-w-2xl mx-auto">
-        <section class="px-4 pb-8">
-          <div class="flex flex-wrap pb-8">
-            <h1 v-if="$page.strapi.notes[0].name" class="text-2xl font-bold">
-              {{ $page.strapi.notes[0].name }}
-            </h1>
-            <div class="flex items-center justify-between w-full pb-4">
-              <div
-                v-if="$page.strapi.notes[0].updated_at"
-                class="text-base opacity-50"
-              >
-                updated:
-                {{ $page.strapi.notes[0].updated_at | dateFormat }}
-              </div>
-              <div>
-                <YandexShare />
-              </div>
-            </div>
-            <VueMarkdown
-              v-if="$page.strapi.notes[0].content"
-              :source="$page.strapi.notes[0].content"
-              class="w-full pb-4 content"
-            />
-          </div>
-        </section>
-      </div>
+    <div class="flex flex-wrap">
       <div
         v-if="$page.strapi.notes[0].usefulLinks.length !== 0"
-        class="px-4 pb-8 lowercase lg:left-0 lg:px-16 lg:fixed"
+        class="order-2 w-full max-w-2xl px-4 pb-4 mx-auto lowercase lg:pt-16 lg:left-0 lg:px-16 lg:fixed lg:w-auto"
       >
         <div class="font-black">Useful Links</div>
         <ul>
@@ -38,7 +12,11 @@
             v-for="link in $page.strapi.notes[0].usefulLinks"
             v-bind:key="link.id"
           >
-            <a :href="link.url" target="_blank" class="flex items-center">
+            <a
+              :href="link.url"
+              target="_blank"
+              class="flex items-center hover:text-red-700"
+            >
               <!-- {{ link.resource }} -->
               <span
                 v-if="link.resource == 'github'"
@@ -65,7 +43,7 @@
       </div>
       <div
         v-if="$page.strapi.notes[0].similar.length !== 0"
-        class="px-4 pb-8 lowercase lg:px-16 lg:right-0 lg:fixed"
+        class="order-3 w-full max-w-2xl px-4 pb-4 mx-auto lowercase lg:pt-16 lg:px-16 lg:right-0 lg:fixed lg:w-auto"
       >
         <div class="font-black" v-if="$page.strapi.notes[0].similar">
           Similar Notes
@@ -75,11 +53,40 @@
             v-for="note in $page.strapi.notes[0].similar"
             v-bind:key="note.id"
           >
-            <g-link :to="'/notes/' + note.slug" class="flex items-center">
+            <g-link
+              :to="'/notes/' + note.slug"
+              class="flex items-center hover:text-red-700"
+            >
               {{ note.name }}
             </g-link>
           </li>
         </ul>
+      </div>
+      <div class="order-1 w-full max-w-2xl mx-auto">
+        <section class="px-4">
+          <div class="flex flex-wrap pb-8">
+            <h1 v-if="$page.strapi.notes[0].name" class="text-2xl font-bold">
+              {{ $page.strapi.notes[0].name }}
+            </h1>
+            <div class="flex items-center justify-between w-full pb-4">
+              <div
+                v-if="$page.strapi.notes[0].updated_at"
+                class="text-base opacity-50"
+              >
+                updated:
+                {{ $page.strapi.notes[0].updated_at | dateFormat }}
+              </div>
+              <div>
+                <YandexShare />
+              </div>
+            </div>
+            <VueMarkdown
+              v-if="$page.strapi.notes[0].content"
+              :source="$page.strapi.notes[0].content"
+              class="w-full pb-4 content"
+            />
+          </div>
+        </section>
       </div>
     </div>
   </Note>
