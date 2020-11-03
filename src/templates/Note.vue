@@ -182,24 +182,24 @@ export default {
       script: [
         { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
       ],
-      // meta: [
-      //   {
-      //     name: "description",
-      //     content: this.$page.strapi.articles[0].Seo.metaDescription,
-      //   },
-      //   {
-      //     property: "og:title",
-      //     content: this.$page.strapi.articles[0].Seo.metaTitle,
-      //   },
-      //   {
-      //     property: "og:description",
-      //     content: this.$page.strapi.articles[0].Seo.metaDescription,
-      //   },
-      //   {
-      //     property: "og:image",
-      //     content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
-      //   },
-      // ],
+      meta: [
+        {
+          name: "description",
+          content: this.$page.strapi.articles[0].Seo.metaDescription,
+        },
+        {
+          property: "og:title",
+          content: this.$page.strapi.articles[0].Seo.metaTitle,
+        },
+        {
+          property: "og:description",
+          content: this.$page.strapi.articles[0].Seo.metaDescription,
+        },
+        //   {
+        //     property: "og:image",
+        //     content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
+        //   },
+      ],
     };
   },
 };
