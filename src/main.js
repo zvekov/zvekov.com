@@ -29,7 +29,7 @@ export default function (Vue, { router, head, isClient ,appOptions }) {
     easing: "ease",
   })
 
-    // Export Head Attributes
+  // Export Head Attributes
   head.htmlAttrs = { lang: "ru", class: "min-h-full antialiased" }
   head.link.push({
     rel: "stylesheet",
