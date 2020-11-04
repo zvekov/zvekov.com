@@ -3,7 +3,7 @@
   <Note>
     <div class="flex flex-wrap">
       <div
-        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase xl:pt-16 xl:pr-16 xl:right-0 xl:fixed xl:w-auto"
+        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase other-links"
       >
         <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
           <div class="font-black">Useful Links</div>
@@ -11,7 +11,7 @@
             <li
               v-for="link in $page.strapi.notes[0].usefulLinks"
               v-bind:key="link.id"
-              class="lg:opacity-50 lg:hover:opacity-100"
+              class="opacity-50 hover:opacity-100"
             >
               <a
                 :href="link.url"
@@ -227,6 +227,12 @@ export default {
 };
 </script>
 <style lang="postcss">
+@screen xl {
+  .other-links {
+    @apply pt-16 left-0 fixed w-auto;
+    margin-left: calc(50% + 21rem);
+  }
+}
 .content pre {
   @apply bg-blue-900 text-white overflow-x-auto px-6 py-4 rounded-md mb-4 text-code font-monospace;
 }
