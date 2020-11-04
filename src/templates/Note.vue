@@ -3,69 +3,67 @@
   <Note>
     <div class="flex flex-wrap">
       <div
-        v-if="$page.strapi.notes[0].usefulLinks.length > 0"
-        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase lg:pt-16 lg:left-0 lg:px-16 lg:fixed lg:w-auto"
+        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase xl:pt-16 xl:pr-16 xl:right-0 xl:fixed xl:w-auto"
       >
-        <div class="font-black">Useful Links</div>
-        <ul>
-          <li
-            v-for="link in $page.strapi.notes[0].usefulLinks"
-            v-bind:key="link.id"
-            class="lg:opacity-50 lg:hover:opacity-100"
-          >
-            <a
-              :href="link.url"
-              target="_blank"
-              class="flex items-center text-lg hover:text-red-700 lg:text-base"
+        <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
+          <div class="font-black">Useful Links</div>
+          <ul>
+            <li
+              v-for="link in $page.strapi.notes[0].usefulLinks"
+              v-bind:key="link.id"
+              class="lg:opacity-50 lg:hover:opacity-100"
             >
-              <span
-                v-if="link.resource == 'github'"
-                class="flex justify-end w-6 mr-2"
+              <a
+                :href="link.url"
+                target="_blank"
+                class="flex items-center text-lg hover:text-red-700 lg:text-base"
               >
-                <IconGithub class="w-4 h-4 mt-0 filter-grayscale" />
-              </span>
-              <span
-                v-if="link.resource == 'npm'"
-                class="flex justify-end w-6 mr-2"
-              >
-                <IconNpm class="w-6 h-6 mt-1 filter-grayscale" />
-              </span>
-              <span v-if="link.resource == 'bitbucket'"> bitbucketicon </span>
-              <span v-if="link.resource == 'codepen'"> codepenicon </span>
-              <span
-                v-if="link.resource == 'link'"
-                class="flex justify-end w-6 mr-2"
-              ></span>
-              {{ link.title }}
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div
-        v-if="$page.strapi.notes[0].similar.length > 0"
-        class="order-3 w-full max-w-2xl px-6 pb-4 mx-auto lowercase lg:pt-16 lg:px-16 lg:right-0 lg:fixed lg:w-auto"
-      >
-        <div class="font-black" v-if="$page.strapi.notes[0].similar">
-          Similar Notes
+                <span
+                  v-if="link.resource == 'github'"
+                  class="flex justify-end w-6 mr-2"
+                >
+                  <IconGithub class="w-4 h-4 mt-0 filter-grayscale" />
+                </span>
+                <span
+                  v-if="link.resource == 'npm'"
+                  class="flex justify-end w-6 mr-2"
+                >
+                  <IconNpm class="w-6 h-6 mt-1 filter-grayscale" />
+                </span>
+                <span v-if="link.resource == 'bitbucket'"> bitbucketicon </span>
+                <span v-if="link.resource == 'codepen'"> codepenicon </span>
+                <span
+                  v-if="link.resource == 'link'"
+                  class="flex justify-end w-6 mr-2"
+                ></span>
+                {{ link.title }}
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li
-            v-for="note in $page.strapi.notes[0].similar"
-            v-bind:key="note.id"
-            class="lg:opacity-50 lg:hover:opacity-100"
-          >
-            <g-link
-              :to="'/notes/' + note.slug"
-              class="flex items-center text-lg hover:text-red-700 lg:text-base"
+        <div v-if="$page.strapi.notes[0].similar.length > 0" class="">
+          <div class="font-black" v-if="$page.strapi.notes[0].similar">
+            Similar Notes
+          </div>
+          <ul>
+            <li
+              v-for="note in $page.strapi.notes[0].similar"
+              v-bind:key="note.id"
+              class="lg:opacity-50 lg:hover:opacity-100"
             >
-              {{ note.name }}
-            </g-link>
-          </li>
-        </ul>
+              <g-link
+                :to="'/notes/' + note.slug"
+                class="flex items-center text-lg hover:text-red-700 lg:text-base"
+              >
+                {{ note.name }}
+              </g-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="order-1 w-full max-w-2xl mx-auto">
         <section class="px-4">
-          <div class="flex flex-wrap pb-8">
+          <div class="flex flex-wrap">
             <h1 v-if="$page.strapi.notes[0].name" class="text-2xl font-bold">
               {{ $page.strapi.notes[0].name }}
             </h1>
