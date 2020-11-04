@@ -265,7 +265,6 @@ export default {
   top: -22px;
 }
 [class^="ais-"] {
-  font-size: 1rem;
   box-sizing: border-box;
 }
 a[class^="ais-"] {
