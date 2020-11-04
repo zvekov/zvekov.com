@@ -35,7 +35,9 @@
                 <span
                   v-if="link.resource == 'link'"
                   class="flex justify-end w-6 mr-2"
-                ></span>
+                >
+                  <IconLink class="w-4 h-3 filter-grayscale" />
+                </span>
                 {{ link.title }}
               </a>
             </li>
@@ -137,7 +139,6 @@
   }
 </page-query>
 <script>
-import Note from "~/layouts/Note";
 import moment from "moment";
 import VueMarkdown from "vue-markdown";
 import YandexShare from "~/components/atoms/YandexShare";
@@ -145,11 +146,14 @@ import YandexShare from "~/components/atoms/YandexShare";
 // Resources Icons
 import IconNpm from "~/assets/svg/icon-npm.svg?inline";
 import IconGithub from "~/assets/svg/icon-github.svg?inline";
+import IconLink from "~/assets/svg/icon-link.svg?inline";
 
 export default {
+  layout: "Note",
   components: {
     IconNpm,
     IconGithub,
+    IconLink,
     VueMarkdown,
     YandexShare,
   },
