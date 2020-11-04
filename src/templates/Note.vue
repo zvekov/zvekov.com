@@ -41,19 +41,37 @@
             </li>
           </ul>
         </div>
-        <div v-if="$page.strapi.notes[0].similar.length > 0" class="">
-          <div class="font-black" v-if="$page.strapi.notes[0].similar">
+        <div
+          v-if="
+            $page.strapi.notes[0].similars.length > 0 ||
+            $page.strapi.notes[0].notes.length > 0
+          "
+          class=""
+        >
+          <div class="font-black" v-if="$page.strapi.notes[0].similars">
             Similar Notes
           </div>
           <ul>
             <li
-              v-for="note in $page.strapi.notes[0].similar"
+              v-for="note in $page.strapi.notes[0].similars"
               v-bind:key="note.id"
               class="lg:opacity-50 lg:hover:opacity-100"
             >
               <g-link
                 :to="'/notes/' + note.slug"
-                class="flex items-center text-lg hover:text-red-700 lg:text-base"
+                class="flex items-center hover:text-red-700 lg:text-base"
+              >
+                {{ note.name }}
+              </g-link>
+            </li>
+            <li
+              v-for="note in $page.strapi.notes[0].notes"
+              v-bind:key="note.id"
+              class="lg:opacity-50 lg:hover:opacity-100"
+            >
+              <g-link
+                :to="'/notes/' + note.slug"
+                class="flex items-center hover:text-red-700 lg:text-base"
               >
                 {{ note.name }}
               </g-link>
@@ -104,7 +122,12 @@
           url
           resource
         }
-        similar {
+        similars {
+          id
+          name
+          slug
+        }
+        notes {
           id
           name
           slug
