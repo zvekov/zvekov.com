@@ -32,13 +32,46 @@ export default {
     Navigation,
     Pogonya,
   },
+  data() {
+    return {
+      jsonld: {
+        "@context": "http://www.schema.org",
+        "@type": "person",
+        name: this.$t("atoms.name"),
+        jobTitle: this.$t("atoms.profession"),
+        height: this.$t("height"),
+        gender: this.$t("gender"),
+        url: "https://zvekov.com",
+        sameAs: [
+          "https://www.facebook.com/zvekau/",
+          "https://twitter.com/zvekau/",
+          "https://www.instagram.com/zvekov/",
+          "https://vk.com/zvekau/",
+          "https://ok.ru/zvekov/",
+        ],
+        image: "https://zvekov.com/images/logo.jpg",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: this.$t("city"),
+          addressRegion: this.$t("region"),
+          postalCode: "247210",
+          addressCountry: this.$t("country"),
+        },
+        email: "hey@zvekov.com",
+        birthDate: "1993-09-09",
+        birthPlace: this.$t("bithplace"),
+        nationality: this.$t("nationality"),
+        telephone: "+375 (33) 604-54-54",
+      },
+    };
+  },
   metaInfo() {
     return {
       title: this.$t("atoms.name"),
       titleTemplate: "%s: " + this.$t("atoms.profession"),
-      // script: [
-      //   { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
-      // ],
+      script: [
+        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+      ],
       meta: [
         {
           name: "description",
