@@ -118,6 +118,7 @@
         name
         content
         updated_at
+        description
         usefulLinks {
           id
           title
@@ -209,18 +210,19 @@ export default {
         { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
       ],
       meta: [
-        // {
-        //   name: "description",
-        //   content: this.$page.strapi.articles[0].Seo.metaDescription,
-        // },
-        // {
-        //   property: "og:title",
-        //   content: this.$page.strapi.articles[0].Seo.metaTitle,
-        // },
-        // {
-        //   property: "og:description",
-        //   content: this.$page.strapi.articles[0].Seo.metaDescription,
-        // },
+        {
+          name: "description",
+          content: this.$page.strapi.articles[0].description,
+        },
+        {
+          property: "og:title",
+          content:
+            this.$page.strapi.articles[0].name + this.$t("pages.notes.title"),
+        },
+        {
+          property: "og:description",
+          content: this.$page.strapi.articles[0].description,
+        },
         //   {
         //     property: "og:image",
         //     content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
