@@ -60,7 +60,7 @@
               class="lg:opacity-50 lg:hover:opacity-100"
             >
               <g-link
-                :to="'/notes/' + note.slug"
+                :to="'/notes/' + note.slug + '/'"
                 class="flex items-center hover:text-red-700 lg:text-base"
               >
                 {{ note.name }}
