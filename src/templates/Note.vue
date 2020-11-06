@@ -212,7 +212,7 @@ export default {
       meta: [
         {
           name: "description",
-          content: this.$page.strapi.articles[0].description,
+          content: this.$page.strapi.notes[0].description,
         },
         {
           property: "og:title",
