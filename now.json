@@ -1,11 +1,12 @@
 {
   "name": "zvekov.com",
   "scope": "zvekov",
-  "github": { "enabled": true },
+  "github": {
+    "enabled": true
+  },
   "trailingSlash": true,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "status": 404, "dest": "404" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "404" }
   ],
   "builds": [
     {
