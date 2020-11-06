@@ -216,8 +216,7 @@ export default {
         },
         {
           property: "og:title",
-          content:
-            this.$page.strapi.notes[0].name + this.$t("pages.notes.title"),
+          content: this.$page.strapi.notes[0].name,
         },
         {
           property: "og:description",
