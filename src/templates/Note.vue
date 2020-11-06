@@ -217,11 +217,11 @@ export default {
         {
           property: "og:title",
           content:
-            this.$page.strapi.articles[0].name + this.$t("pages.notes.title"),
+            this.$page.strapi.notes[0].name + this.$t("pages.notes.title"),
         },
         {
           property: "og:description",
-          content: this.$page.strapi.articles[0].description,
+          content: this.$page.strapi.notes[0].description,
         },
         //   {
         //     property: "og:image",
