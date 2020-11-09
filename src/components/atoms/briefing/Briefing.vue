@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center w-full h-full">
+  <div class="flex items-center w-full h-full max-w-2xl mx-auto">
     <!-- <iframe
       v-if="this.$i18n.locale == 'ru-ru'"
       id="typeform-full"
@@ -108,126 +108,130 @@ export default {
         thankYouText: "На этом 😉 Жми отправить бриф",
       }),
       questions: [
-        // QuestionModel array
         // new QuestionModel({
-        //   title: "Что обсудим?",
-        //   type: QuestionType.MultipleChoice,
-        //   // tagline: "Path B",
-        //   subtitle: "Вау! 😉",
-        //   helpText: "Выберите один или несколько вариантов",
-        //   multiple: false,
-        //   allowOther: true,
-        //   options: [
-        //     new ChoiceOption({
-        //       label: "Веб-сайт",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Веб-сервис",
-        //       value: "webservice",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Интернет-магазин",
-        //       value: "ecommerce",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Мобильное приложение",
-        //       value: "nativeapp",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Декстоп приложение",
-        //       value: "desctopapp",
-        //     }),
-        //   ],
-        //   jump: {
-        //     website: "website",
-        //     ecommerce: "ecommerce",
-        //     webservice: "webservice",
-        //     nativeapp: "nativeapp",
-        //     desctopapp: "decstopapp",
-        //   },
+        //   id: "whatsapp_id",
+        //   title: "Салют 👋",
+        //   type: QuestionType.SectionBreak,
+        //   content:
+        //     "Бриф очень прост и выполнен в виде опроса. Для быстрого выбора пункта используйте кнопки клавиатуры (A,B,C,D и т.д.), а для перехода к следующему вопросу – Enter ↵",
+        //   // subtitle: "Укажите номер телефона в международном формате",
         // }),
-        // new QuestionModel({
-        //   id: "website",
-        //   title: "Тип сайта",
-        //   type: QuestionType.MultipleChoice,
-        //   // tagline: "Разработка веб-сайта",
-        //   subtitle: "Выберите тип будущего сайта.",
-        //   helpText: "Выберите один или несколько вариантов",
-        //   multiple: false,
-        //   options: [
-        //     new ChoiceOption({
-        //       label: "Сайт-визитка",
-        //       value: "business_site",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Лендинг",
-        //       value: "landing_page",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Многостраничный сайт",
-        //       value: "full_site",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Каталог продукции",
-        //       value: "catalog_site",
-        //     }),
-        //   ],
-        // }),
-        // new QuestionModel({
-        //   id: "website",
-        //   title: "Тип сайта",
-        //   type: QuestionType.MultipleChoice,
-        //   // tagline: "Path B",
-        //   subtitle: "Вау! 😉",
-        //   helpText: "Выберите один или несколько вариантов",
-        //   multiple: false,
-        //   options: [
-        //     new ChoiceOption({
-        //       label: "Лендинг",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Многостраничный сайт",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Каталог продукции",
-        //       value: "ecommerce",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Сайт-визитка",
-        //       value: "nativeapp",
-        //     }),
-        //   ],
-        // }),
-        // new QuestionModel({
-        //   id: "ecommerce",
-        //   title: "Тип сайта",
-        //   type: QuestionType.Dropdown,
-        //   // tagline: "Path B",
-        //   subtitle: "Вау! 😉",
-        //   helpText: "Выберите один или несколько вариантов",
-        //   multiple: false,
-        //   options: [
-        //     new ChoiceOption({
-        //       label: "Беларусь",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Россия",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Каталог продукции",
-        //       value: "США",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "Сайт-визитка",
-        //       value: "nativeapp",
-        //     }),
-        //   ],
-        // }),
+        new QuestionModel({
+          title: "Что обсудим?",
+          type: QuestionType.MultipleChoice,
+
+          subtitle: "Вау! 😉",
+          helpText: " ",
+          multiple: false,
+          allowOther: false,
+          options: [
+            new ChoiceOption({
+              label: "Веб-сайт",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "Веб-сервис",
+              value: "webservice",
+            }),
+            new ChoiceOption({
+              label: "Интернет-магазин",
+              value: "ecommerce",
+            }),
+            new ChoiceOption({
+              label: "Нативное приложение",
+              value: "nativeapp",
+            }),
+          ],
+          jump: {
+            website: "website",
+            ecommerce: "ecommerce",
+            webservice: "webservice",
+            nativeapp: "nativeapp",
+            desctopapp: "decstopapp",
+          },
+        }),
+        new QuestionModel({
+          id: "website",
+          title: "Тип сайта",
+          type: QuestionType.MultipleChoice,
+          // tagline: "Разработка веб-сайта",
+          subtitle: "Выберите тип будущего сайта.",
+          helpText: " ",
+          helpTextShow: false,
+          multiple: false,
+          options: [
+            new ChoiceOption({
+              label: "Сайт-визитка",
+              value: "business_site",
+            }),
+            new ChoiceOption({
+              label: "Лендинг",
+              value: "landing_page",
+            }),
+            new ChoiceOption({
+              label: "Многостраничный сайт",
+              value: "full_site",
+            }),
+            new ChoiceOption({
+              label: "Каталог продукции",
+              value: "catalog_site",
+            }),
+          ],
+        }),
+        new QuestionModel({
+          id: "ecommerce",
+          title: "Платформа",
+          type: QuestionType.MultipleChoice,
+          // tagline: "Path B",
+          subtitle: "Вау! 😉",
+          helpText: "Выберите один или несколько вариантов",
+          multiple: false,
+          options: [
+            new ChoiceOption({
+              label: "Лендинг",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "Многостраничный сайт",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "Каталог продукции",
+              value: "ecommerce",
+            }),
+            new ChoiceOption({
+              label: "Сайт-визитка",
+              value: "nativeapp",
+            }),
+          ],
+        }),
+        new QuestionModel({
+          id: "nativeapp",
+          title: "Тип сайта",
+          type: QuestionType.Dropdown,
+          // tagline: "Path B",
+          subtitle: "Вау! 😉",
+          helpText: "Выберите один или несколько вариантов",
+          multiple: false,
+          options: [
+            new ChoiceOption({
+              label: "Беларусь",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "Россия",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "Каталог продукции",
+              value: "США",
+            }),
+            new ChoiceOption({
+              label: "Сайт-визитка",
+              value: "nativeapp",
+            }),
+          ],
+        }),
         // new QuestionModel({
         //   title: "Расскажите о задаче",
         //   type: QuestionType.LongText,
@@ -235,68 +239,66 @@ export default {
         //   subtitle:
         //     "Ответы на вопросы: что, для кого, конкуренты/примеры, главные отличия.",
         // }),
-        // new QuestionModel({
-        //   title: "Срок выполнения",
-        //   type: QuestionType.MultipleChoice,
-        //   // tagline: "Path B",
-        //   subtitle: "Path A sounds like a winner! 😉",
-        //   help: "aasa",
-        //   options: [
-        //     new ChoiceOption({
-        //       label: "до месяца",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "1-2 месяца",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "2-3 месяца",
-        //       value: "ecommerce",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "обсуждаемо",
-        //       value: "nativeapp",
-        //     }),
-        //   ],
-        // }),
-        // new QuestionModel({
-        //   title: "Планируемый бюджет",
-        //   type: QuestionType.MultipleChoice,
-        //   // tagline: "Path B",
-        //   subtitle: "Path A sounds like a winner! 😉",
-        //   help: "aasa",
-        //   options: [
-        //     new ChoiceOption({
-        //       label: "до $1000",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "$1000 – $2500",
-        //       value: "website",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "$2500 – $5000",
-        //       value: "ecommerce",
-        //     }),
-        //     new ChoiceOption({
-        //       label: "свыше $5000",
-        //       value: "nativeapp",
-        //     }),
-        //   ],
-        // }),
-        // new QuestionModel({
-        //   title: "Ваше имя",
-        //   type: QuestionType.Text,
-        //   // tagline: "Path B",
-        //   subtitle: "Как мне к Вам обращаться.",
-        // }),
         new QuestionModel({
-          title: "Способ связи",
+          title: "Срок выполнения",
           type: QuestionType.MultipleChoice,
-          // tagline: "Path B",
-          subtitle: "Выберите наиболее удобный способ связи.",
-          helpText: "aasa",
+          subtitle: "Как быстро нужен готовый проект",
+          helpText: " ",
+          options: [
+            new ChoiceOption({
+              label: "до месяца",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "1-2 месяца",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "2-3 месяца",
+              value: "ecommerce",
+            }),
+            new ChoiceOption({
+              label: "обсуждаемо",
+              value: "nativeapp",
+            }),
+          ],
+        }),
+        new QuestionModel({
+          title: "Бюджет",
+          type: QuestionType.MultipleChoice,
+          subtitle: "Сколько Вы готовы потратить на выполнение задачи",
+          helpText: " ",
+          options: [
+            new ChoiceOption({
+              label: "до $1000",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "$1000 – $2500",
+              value: "website",
+            }),
+            new ChoiceOption({
+              label: "$2500 – $5000",
+              value: "ecommerce",
+            }),
+            new ChoiceOption({
+              label: "свыше $5000",
+              value: "nativeapp",
+            }),
+          ],
+        }),
+        new QuestionModel({
+          title: "Ваше имя",
+          type: QuestionType.Text,
+          subtitle: "Как мне к Вам обращаться",
+          placeholder: "Например: Юрий",
+        }),
+        new QuestionModel({
+          title: "Способ связи 👋",
+          type: QuestionType.MultipleChoice,
+          subtitle: "Выберите наиболее удобный для себя способ",
+          helpText: " ",
+          helpTextShow: false,
           options: [
             new ChoiceOption({
               label: "Telegram",
@@ -336,8 +338,8 @@ export default {
           id: "telegram_id",
           title: "Логин в Telegram",
           type: QuestionType.Text,
-          subtitle: "Path A sounds like a winner! 😉",
-          helpText: "aasa",
+          subtitle: "Укажите свой логин в виде @telegramuser",
+          placeholder: "Например: @zvekov",
           jump: {
             _other: "_submit",
           },
@@ -346,8 +348,8 @@ export default {
           id: "facebook_id",
           title: "Логин в Facebook",
           type: QuestionType.Text,
-          subtitle: "Path A sounds like a winner! 😉",
-          helpText: "aasa",
+          subtitle: "Укажите свой логин в виде fbuser",
+          placeholder: "Например: zvekau",
           jump: {
             _other: "_submit",
           },
@@ -356,39 +358,28 @@ export default {
           id: "viber_id",
           title: "Номер в Viber",
           type: QuestionType.Text,
-          subtitle: "Укажите номер телефона в международном формате.",
-          helpText: "aasa",
-          placeholder: "Например +375 99 999-99-99",
+          subtitle: "Укажите номер телефона в международном формате",
+          placeholder: "Например: +375 33 604-54-54",
           jump: {
             _other: "_submit",
           },
         }),
         new QuestionModel({
           id: "whatsapp_id",
-          title: "Номер в Whatsapp",
+          title: "# Номер в Whatsapp",
           type: QuestionType.Text,
-          subtitle: "Укажите номер телефона в международном формате.",
-          helpText: "aasa",
-          placeholder: "Например +375 99 999-99-99",
+          subtitle: "Укажите номер телефона в международном формате",
+          placeholder: "Например: +375 33 604-54-54",
           jump: {
             _other: "_submit",
           },
         }),
-        // new QuestionModel({
-        //   id: "whatsapp_id",
-        //   title: "Номер в Whatsapp",
-        //   type: QuestionType.SectionBreak,
-        //   subtitle: "Укажите номер телефона в международном формате",
-        //   helpText: "aasa",
-        //   placeholder: "Например +375 (99) 999-99-99",
-        //   value: "whatsapp_number",
-        // }),
         new QuestionModel({
           id: "skype_id",
           title: "Логин в Skype",
           type: QuestionType.Text,
-          subtitle: "Path A sounds like a winner! 😉",
-          helpText: "aasa",
+          subtitle: "Укажите свой логин в виде skypeuser",
+          placeholder: "Например: yurazvekov",
           jump: {
             _other: "_submit",
           },
@@ -397,9 +388,8 @@ export default {
           id: "email_id",
           title: "Ваш E-Mail",
           type: QuestionType.Email,
-          // tagline: "Path B",
-          subtitle:
-            "Ответы на вопросы: что, для кого, конкуренты/примеры, главные отличия.",
+          placeholder: "Например: hey@zvekov.com",
+          subtitle: "Укажите рабочий или личный почтовый ящик",
         }),
       ],
     };
@@ -480,6 +470,13 @@ export default {
 </script>
 
 <style lang="postcss">
+.vff {
+  @apply p-0 m-0;
+}
+.vff.vff-not-standalone {
+  @apply m-0;
+  padding-top: calc(50% - 10rem);
+}
 .vff .f-container,
 header.vff-header .f-container,
 .vff .fh2,
@@ -508,12 +505,21 @@ header.vff-header .f-container,
 .vff span.f-text {
   @apply text-2xl;
 }
+.vff .f-section-wrap .fh2 {
+  @apply text-2xl font-bold;
+}
 .vff .fh2 span.f-sub,
-.vff .fh2 span.f-tagline {
+.vff .fh2 span.f-tagline,
+.vff .f-section-text {
   @apply text-lg;
 }
 .vff span.f-sub span + span.f-help {
-  @apply text-base opacity-50;
+  @apply text-sm;
+}
+@screen sm {
+  .vff span.f-sub span + span.f-help {
+    @apply text-xs;
+  }
 }
 .vff span.f-text,
 .vff .fh2 span.f-sub,
