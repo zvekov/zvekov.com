@@ -1,7 +1,7 @@
 <template>
   <Fullscreen>
     <div class="flex items-center justify-center w-full h-screen">
-      <div class="absolute">{{ $t("pages.briefing.loading") }}</div>
+      <!-- <div class="absolute">{{ $t("pages.briefing.loading") }}</div> -->
       <Briefing class="z-30" />
       <div class="fixed bottom-0 right-0 pb-3 pr-4">
         <Pogonya />

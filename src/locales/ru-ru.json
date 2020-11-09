@@ -42,6 +42,12 @@
       "placeholder": "Несколько символов для поиска...",
       "not_found": "Заметок не найдено! Попробуйте ещё...",
       "latest": "Последние"
+    },
+    "briefing": {
+      "continue": "Далее",
+      "pressEnter": "Нажмите",
+      "submitText": "Отправить бриф",
+      "otherPrompt": "Другое"
     }
   },
   "pages": {

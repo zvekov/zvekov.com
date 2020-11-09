@@ -16,7 +16,7 @@
               <a
                 :href="link.url"
                 target="_blank"
-                class="flex items-center text-lg hover:text-red-700 lg:text-base"
+                class="flex items-center text-base hover:text-red-700"
               >
                 <span
                   v-if="link.resource == 'github'"
@@ -57,7 +57,7 @@
             <li
               v-for="note in $page.strapi.notes[0].similars"
               v-bind:key="note.id"
-              class="lg:opacity-50 lg:hover:opacity-100"
+              class="opacity-50 hover:opacity-100"
             >
               <g-link
                 :to="'/notes/' + note.slug + '/'"
@@ -69,7 +69,7 @@
             <li
               v-for="note in $page.strapi.notes[0].notes"
               v-bind:key="note.id"
-              class="lg:opacity-50 lg:hover:opacity-100"
+              class="opacity-50 hover:opacity-100"
             >
               <g-link
                 :to="'/notes/' + note.slug"
