@@ -40,9 +40,10 @@
       ref="flowform"
       v-on:complete="onComplete"
       v-on:submit="onSubmit"
-      v-bind:questions="questions"
-      v-bind:language="language"
-      v-bind:standalone="false"
+      :questions="questions"
+      :language="language"
+      :standalone="false"
+      :progressbar="false"
     >
       <template v-slot:complete>
         <div class="f-section-wrap">
@@ -102,7 +103,9 @@ export default {
     return {
       language: new LanguageModel({
         continue: this.$t("organisms.briefing.continue"),
-        pressEnter: this.$t("organisms.briefing.pressEnter") + " Enter ↵",
+        pressEnter:
+          this.$t("organisms.briefing.pressEnter") +
+          " <strong>Enter ↵</strong>",
         submitText: this.$t("organisms.briefing.submitText"),
         otherPrompt: this.$t("organisms.briefing.otherPrompt"),
         thankYouText: "На этом 😉 Жми отправить бриф",
@@ -117,10 +120,9 @@ export default {
         //   // subtitle: "Укажите номер телефона в международном формате",
         // }),
         new QuestionModel({
-          title: "Что обсудим?",
+          title: "Что обсудим",
           type: QuestionType.MultipleChoice,
-
-          subtitle: "Вау! 😉",
+          subtitle: "Какой проект необходимо реализовать?",
           helpText: " ",
           multiple: false,
           allowOther: false,
@@ -129,25 +131,25 @@ export default {
               label: "Веб-сайт",
               value: "website",
             }),
-            new ChoiceOption({
-              label: "Веб-сервис",
-              value: "webservice",
-            }),
-            new ChoiceOption({
-              label: "Интернет-магазин",
-              value: "ecommerce",
-            }),
-            new ChoiceOption({
-              label: "Нативное приложение",
-              value: "nativeapp",
-            }),
+            // new ChoiceOption({
+            //   label: "Веб-сервис",
+            //   value: "webservice",
+            // }),
+            // new ChoiceOption({
+            //   label: "Интернет-магазин",
+            //   value: "ecommerce",
+            // }),
+            // new ChoiceOption({
+            //   label: "Нативное приложение",
+            //   value: "nativeapp",
+            // }),
           ],
           jump: {
             website: "website",
-            ecommerce: "ecommerce",
-            webservice: "webservice",
-            nativeapp: "nativeapp",
-            desctopapp: "decstopapp",
+            // ecommerce: "ecommerce",
+            // webservice: "webservice",
+            // nativeapp: "nativeapp",
+            // desctopapp: "decstopapp",
           },
         }),
         new QuestionModel({
@@ -177,60 +179,9 @@ export default {
               value: "catalog_site",
             }),
           ],
-        }),
-        new QuestionModel({
-          id: "ecommerce",
-          title: "Платформа",
-          type: QuestionType.MultipleChoice,
-          // tagline: "Path B",
-          subtitle: "Вау! 😉",
-          helpText: "Выберите один или несколько вариантов",
-          multiple: false,
-          options: [
-            new ChoiceOption({
-              label: "Лендинг",
-              value: "website",
-            }),
-            new ChoiceOption({
-              label: "Многостраничный сайт",
-              value: "website",
-            }),
-            new ChoiceOption({
-              label: "Каталог продукции",
-              value: "ecommerce",
-            }),
-            new ChoiceOption({
-              label: "Сайт-визитка",
-              value: "nativeapp",
-            }),
-          ],
-        }),
-        new QuestionModel({
-          id: "nativeapp",
-          title: "Тип сайта",
-          type: QuestionType.Dropdown,
-          // tagline: "Path B",
-          subtitle: "Вау! 😉",
-          helpText: "Выберите один или несколько вариантов",
-          multiple: false,
-          options: [
-            new ChoiceOption({
-              label: "Беларусь",
-              value: "website",
-            }),
-            new ChoiceOption({
-              label: "Россия",
-              value: "website",
-            }),
-            new ChoiceOption({
-              label: "Каталог продукции",
-              value: "США",
-            }),
-            new ChoiceOption({
-              label: "Сайт-визитка",
-              value: "nativeapp",
-            }),
-          ],
+          jump: {
+            // business_site: "business_site",
+          },
         }),
         // new QuestionModel({
         //   title: "Расскажите о задаче",
@@ -242,7 +193,7 @@ export default {
         new QuestionModel({
           title: "Срок выполнения",
           type: QuestionType.MultipleChoice,
-          subtitle: "Как быстро нужен готовый проект",
+          subtitle: "Как быстро нужен готовый проект.",
           helpText: " ",
           options: [
             new ChoiceOption({
@@ -266,7 +217,7 @@ export default {
         new QuestionModel({
           title: "Бюджет",
           type: QuestionType.MultipleChoice,
-          subtitle: "Сколько Вы готовы потратить на выполнение задачи",
+          subtitle: "Сколько Вы готовы потратить на выполнение задачи?",
           helpText: " ",
           options: [
             new ChoiceOption({
@@ -290,13 +241,13 @@ export default {
         new QuestionModel({
           title: "Ваше имя",
           type: QuestionType.Text,
-          subtitle: "Как мне к Вам обращаться",
+          subtitle: "Как мне к Вам обращаться?",
           placeholder: "Например: Юрий",
         }),
         new QuestionModel({
           title: "Способ связи 👋",
           type: QuestionType.MultipleChoice,
-          subtitle: "Выберите наиболее удобный для себя способ",
+          subtitle: "Выберите наиболее удобный для себя способ.",
           helpText: " ",
           helpTextShow: false,
           options: [
@@ -338,7 +289,7 @@ export default {
           id: "telegram_id",
           title: "Логин в Telegram",
           type: QuestionType.Text,
-          subtitle: "Укажите свой логин в виде @telegramuser",
+          subtitle: "Укажите свой логин в виде @telegramuser.",
           placeholder: "Например: @zvekov",
           jump: {
             _other: "_submit",
@@ -348,7 +299,7 @@ export default {
           id: "facebook_id",
           title: "Логин в Facebook",
           type: QuestionType.Text,
-          subtitle: "Укажите свой логин в виде fbuser",
+          subtitle: "Укажите свой логин в виде fbuser.",
           placeholder: "Например: zvekau",
           jump: {
             _other: "_submit",
@@ -368,7 +319,7 @@ export default {
           id: "whatsapp_id",
           title: "# Номер в Whatsapp",
           type: QuestionType.Text,
-          subtitle: "Укажите номер телефона в международном формате",
+          subtitle: "Укажите номер телефона в международном формате.",
           placeholder: "Например: +375 33 604-54-54",
           jump: {
             _other: "_submit",
@@ -378,7 +329,7 @@ export default {
           id: "skype_id",
           title: "Логин в Skype",
           type: QuestionType.Text,
-          subtitle: "Укажите свой логин в виде skypeuser",
+          subtitle: "Укажите свой логин в виде skypeuser.",
           placeholder: "Например: yurazvekov",
           jump: {
             _other: "_submit",
@@ -389,7 +340,7 @@ export default {
           title: "Ваш E-Mail",
           type: QuestionType.Email,
           placeholder: "Например: hey@zvekov.com",
-          subtitle: "Укажите рабочий или личный почтовый ящик",
+          subtitle: "Укажите рабочий или личный почтовый ящик.",
         }),
       ],
     };
@@ -457,15 +408,15 @@ export default {
       return data;
     },
   },
-  head() {
-    return {
-      script: [
-        {
-          src: "https://embed.typeform.com/embed.js",
-        },
-      ],
-    };
-  },
+  // head() {
+  //   return {
+  //     script: [
+  //       {
+  //         src: "https://embed.typeform.com/embed.js",
+  //       },
+  //     ],
+  //   };
+  // },
 };
 </script>
 
@@ -475,7 +426,12 @@ export default {
 }
 .vff.vff-not-standalone {
   @apply m-0;
-  padding-top: calc(50% - 10rem);
+  padding-top: calc(50% - 3rem);
+}
+@screen lg {
+  .vff.vff-not-standalone {
+    padding-top: calc(50% - 10rem);
+  }
 }
 .vff .f-container,
 header.vff-header .f-container,
@@ -511,7 +467,17 @@ header.vff-header .f-container,
 .vff .fh2 span.f-sub,
 .vff .fh2 span.f-tagline,
 .vff .f-section-text {
-  @apply text-lg;
+  @apply text-base py-1;
+}
+.vff span.f-sub + .f-answer.f-full-width {
+  @apply mt-0;
+}
+@screen xs {
+  .vff .fh2 span.f-sub,
+  .vff .fh2 span.f-tagline,
+  .vff .f-section-text {
+    @apply text-lg;
+  }
 }
 .vff span.f-sub span + span.f-help {
   @apply text-sm;
@@ -528,12 +494,20 @@ header.vff-header .f-container,
 .vff span.f-sub + .f-answer.f-full-width,
 .vff .text-alert,
 .vff .f-invalid {
-  @apply mx-2;
+  @apply mx-4;
 }
 .vff button {
   @apply border border-gray-700 rounded-md px-4 py-1;
 }
-
+.vff .f-full-width {
+  @apply w-auto;
+}
+.vff.vff-not-standalone .vff-footer {
+  @apply top-0 bottom-auto mt-24 right-auto left-0 mx-0 px-0;
+}
+.vff-footer .footer-inner-wrap {
+  @apply p-0 mx-4 text-left;
+}
 .vff .f-full-width input[type="email"],
 .vff .f-full-width input[type="number"],
 .vff .f-full-width input[type="password"],

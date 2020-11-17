@@ -42,6 +42,12 @@
       "placeholder": "Multiple characters to search...",
       "not_found": "Notes not found! Research...",
       "latest": "Latest"
+    },
+      "briefing": {
+      "continue": "Next",
+      "pressEnter": "press",
+      "submitText": "Send a brief",
+      "otherPrompt": "Other"
     }
   },
   "pages": {

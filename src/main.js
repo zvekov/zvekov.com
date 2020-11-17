@@ -15,21 +15,21 @@ import InstantSearch from 'vue-instantsearch';
 
 export default function (Vue, { router, head, isClient ,appOptions }) {
 
-  // Export Layouts & Components
+  // Set Layouts & Components
   Vue.component("Layout", DefaultLayout)
   Vue.component("Fullscreen", FullscreenLayout)
   Vue.component("Homepage", HomepageLayout)
   Vue.component("Note", NoteLayout)
   Vue.component("v-select", vSelect)
 
-  // Export Plugins
+  // Set Plugins
   Vue.use(InstantSearch);
   Vue.use(VueScrollTo, {
     duration: 500,
     easing: "ease",
   })
 
-  // Export Head Attributes
+  // Set Head Attributes
   head.htmlAttrs = { lang: "ru", class: "min-h-full antialiased" }
   head.link.push({
     rel: "stylesheet",
