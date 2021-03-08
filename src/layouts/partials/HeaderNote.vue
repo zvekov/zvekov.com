@@ -6,16 +6,14 @@
       <g-link class="flex py-6" :to="$tp('/notes/')">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="32"
+          height="32"
           fill="none"
           viewBox="0 0 24 24"
         >
           <path
-            stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M5.5 17.497l-5-5 5-5M.5 12.497h23"
+            fill="currentColor"
+            d="M11.03 8.53a.75.75 0 10-1.06-1.06l-4 4a.748.748 0 000 1.06l4 4a.75.75 0 101.06-1.06l-2.72-2.72H18a.75.75 0 000-1.5H8.31l2.72-2.72z"
           />
         </svg>
       </g-link>

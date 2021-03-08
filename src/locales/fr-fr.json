@@ -10,7 +10,7 @@
   "not_found": "Page non trouvée!",
   "atoms": {
     "name": "Yuri Zvekov",
-    "profession": "Développeur JAMstack",
+    "profession": "Développeur Fullstack",
     "links": {
       "about": "À propos de",
       "contact": "Contact",
@@ -19,8 +19,11 @@
   },
   "organisms": {
     "about_text": {
-      "title": "À propos de moi",
-      "text": "<p>Je crée des sites rapides et pratiques à l’aide des outils avancés de JAMstack.</p><p>Selon l’expérience, les générateurs statiques associés aux headlees CMS donnent de bons résultats pour les sites PWA et SPA. Ces sites sont rapides par défaut.</p><p>J’utilise les frameworks JS, CSS et PHP pour la mise en oeuvre de tâches.</p><p>Je préfère les solutions open source, mais j'utilise aussi le développement payant.</p><p>Vue et Laravel est un guide pour développer mes compétences.</p>"
+      "title": "Je crée",
+      "text": "<p>Single Page Apps (SPA), Progressive Web Apps (PWA), applications natives et universelles basées sur JAMstack.</p>"
+    },
+    "stack": {
+      "title": "J'utilise"
     },
     "works": {
       "title": "Travaux"

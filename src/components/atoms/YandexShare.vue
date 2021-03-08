@@ -1,69 +1,69 @@
 <template>
-  <vue-yandex-share
-    v-bind="options"
-    color-scheme="whiteblack"
-  ></vue-yandex-share>
+  <div
+    class="ya-share2"
+    data-curtain
+    data-shape="round"
+    :data-size="dataSize"
+    :lang="lang"
+    data-color-scheme="whiteblack"
+    data-limit="0"
+    data-more-button-type="short"
+    :data-services="dataServices"
+    :data-image:pinterest="dataImage"
+  ></div>
 </template>
 <script>
-import VueYandexShare from "@alexlit/vue-yandex-share";
-
 export default {
-  components: { VueYandexShare },
-
+  props: ["dataSize", "dataImage"],
   data() {
     return {
-      /**
-       * Параметры плагина
-       * Документация по API
-       * https://yandex.ru/dev/share/doc/dg/api-docpage/
-       */
-      options: {
-        accessToken: null,
-        bare: false,
-        counter: false,
-        copy: "last",
-        // description: null,
-        direction: "horizontal",
-        hashtags: null,
-        // image: null,
-        lang: "en",
-        limit: 3,
-        popupDirection: "bottom",
-        popupPosition: "inner",
-        size: "s",
-        title: null,
-        url: null,
-        services: [
-          "telegram",
-          "pocket",
-          "linkedin",
-          "collections",
-          "blogger",
-          //   'delicious',
-          //   'digg',
-          //   'evernote',
-          "facebook",
-          "gplus",
-          //   'lj',
-          "moimir",
-          "odnoklassniki",
-          ,
-          //   'pinterest',
-          //   'qzone',
-          //   'reddit',
-          //   'renren',
-          //   'sinaWeibo',
-          //   'skype',
-          "surfingbird",
-          //   'tencentWeibo',
-          //   'tumblr',
-          "twitter",
-          "viber",
-          "vkontakte",
-          "whatsapp",
-        ],
-      },
+      lang: "ru",
+      dataServices:
+        "telegram,whatsapp,viber,vkontakte,facebook,odnoklassniki,pinterest",
     };
+  },
+  metaInfo: {
+    script: [
+      {
+        src: "https://yastatic.net/share2/share.js",
+        async: true,
+        defer: true,
+      },
+    ],
   },
 };
 </script>
+<style lang="postcss">
+.ya-share2__container_size_m .ya-share2__badge + .ya-share2__title {
+  @apply font-body;
+}
+.ya-share2__container_size_m.ya-share2__container_alone
+  .ya-share2__popup_direction_bottom,
+.ya-share2__container_size_m
+  .ya-share2__item_more.ya-share2__item_has-pretty-view
+  .ya-share2__popup_direction_bottom {
+  @apply pr-2;
+}
+.ya-share2__container_size_m
+  .ya-share2__item_more.ya-share2__item_has-pretty-view
+  .ya-share2__link_more.ya-share2__link_more-button-type_short {
+  background: transparent !important;
+}
+.ya-share2__container_size_m
+  .ya-share2__item_more.ya-share2__item_has-pretty-view
+  .ya-share2__link_more.ya-share2__link_more-button-type_short:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+body[data-theme="dark"] {
+  & .ya-share2__icon_more {
+    filter: invert();
+    opacity: 0.9;
+  }
+  &
+    .ya-share2__container_size_m
+    .ya-share2__item_more.ya-share2__item_has-pretty-view
+    .ya-share2__link_more.ya-share2__link_more-button-type_short {
+    @apply bg-white bg-opacity-10;
+  }
+}
+</style>

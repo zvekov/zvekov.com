@@ -3,7 +3,7 @@
     <section class="px-4">
       <h1 class="text-2xl font-bold">{{ $t("organisms.search.title") }}</h1>
       <!-- eslint-disable-next-line -->
-      <div class="pb-4" v-html="$t('organisms.search.text')"></div>
+      <!-- <div class="pb-4" v-html="$t('organisms.search.text')"></div> -->
     </section>
     <NotesSearch class="px-4" />
   </div>

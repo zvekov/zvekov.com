@@ -10,7 +10,7 @@
   "not_found": "Page not found!",
   "atoms": {
     "name": "Yury Zvekov",
-    "profession": "JAMstack developer",
+    "profession": "Fullstack developer",
     "links": {
       "about": "About",
       "contact": "Contact",
@@ -19,8 +19,11 @@
   },
   "organisms": {
     "about_text": {
-      "title": "About me",
-      "text": "<p>I create high-speed and convenient sites using advanced JAMstack tools.</p><p>As experience shows, modern static site generators with headlees CMS give an excellent result for PWA and SPA sites. These sites are fast by default.</p><p>I use JS, CSS and PHP frameworks for the implementation of tasks.</p><p>I give preference to open source solutions, but I also use commercial developments.</p><p>I like a bunch of Vue and Laravel, which is a guideline for my skill development.</p>"
+      "title": "I create",
+      "text": "<p>Single Page Apps (SPA), Progressive Web Apps (PWA), JAMstack-based native and universal apps.</p>"
+    },
+    "stack": {
+      "title": "I use"
     },
     "works": {
       "title": "Works"
@@ -43,7 +46,7 @@
       "not_found": "Notes not found! Research...",
       "latest": "Latest"
     },
-      "briefing": {
+    "briefing": {
       "continue": "Next",
       "pressEnter": "press",
       "submitText": "Send a brief",

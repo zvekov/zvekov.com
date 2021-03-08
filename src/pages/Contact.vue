@@ -2,7 +2,7 @@
   <Layout>
     <div class="max-w-2xl mx-auto pb-16">
       <Messanagers class="px-4" />
-      <Task class="px-4" />
+      <!-- <Task class="px-4" /> -->
     </div>
   </Layout>
 </template>

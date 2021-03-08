@@ -1,23 +1,18 @@
 <template>
   <Layout>
     <div class="max-w-2xl mx-auto">
-      <AboutText class="px-4" />
+      <AboutText class="px-4 pb-4" />
       <Works class="px-4 pb-16" />
-    </div>
-    <div class="fixed bottom-0 right-0 pr-4 pb-3">
-      <Pogonya />
     </div>
   </Layout>
 </template>
 <script>
-import AboutText from "@/components/organisms/AboutText"
-import Works from "@/components/organisms/Works"
-import Pogonya from "@/components/atoms/Pogonya"
+import AboutText from "@/components/organisms/AboutText";
+import Works from "@/components/organisms/Works";
 export default {
   components: {
     AboutText,
     Works,
-    Pogonya,
   },
   data() {
     return {
@@ -44,7 +39,7 @@ export default {
           },
         ],
       },
-    }
+    };
   },
   metaInfo() {
     return {
@@ -71,7 +66,7 @@ export default {
         //   content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
         // },
       ],
-    }
+    };
   },
-}
+};
 </script>
