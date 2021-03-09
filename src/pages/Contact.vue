@@ -7,8 +7,8 @@
   </Layout>
 </template>
 <script>
-import Task from "~/components/organisms/Task"
-import Messanagers from "~/components/organisms/Messanagers"
+import Task from "~/components/organisms/Task";
+import Messanagers from "~/components/organisms/Messanagers";
 export default {
   components: {
     Task,
@@ -39,7 +39,7 @@ export default {
           },
         ],
       },
-    }
+    };
   },
   metaInfo() {
     return {
@@ -67,7 +67,7 @@ export default {
         //   content: this.$page.strapi.articles[0].Seo.shareImage.image.url,
         // },
       ],
-    }
+    };
   },
   // jsonld() {
   //   const items = this.breadcrumbs.map((item, index) => ({
@@ -84,5 +84,5 @@ export default {
   //     itemListElement: items,
   //   }
   // },
-}
+};
 </script>

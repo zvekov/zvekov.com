@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    require('tailwindcss-filters'),
-  ],
+  plugins: [require("tailwindcss-filters")],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -29,7 +27,7 @@ module.exports = {
     fontSize: {
       sm: "0.625rem",
       xs: "0.703125rem",
-      code: '0.9rem',
+      code: "0.9rem",
       base: "1rem",
       lg: "1.125rem",
       xl: "1.6rem",
@@ -54,19 +52,19 @@ module.exports = {
         "SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace",
       ],
     },
-    filter: { 
-      'none': 'none',
-      'grayscale': 'grayscale(1)',
-      'invert': 'invert(1)',
-      'sepia': 'sepia(1)',
+    filter: {
+      none: "none",
+      grayscale: "grayscale(1)",
+      invert: "invert(1)",
+      sepia: "sepia(1)",
     },
     backdropFilter: {
-      'none': 'none',
-      'blur': 'blur(20px)',
+      none: "none",
+      blur: "blur(20px)",
     },
   },
   variants: {
-    filter: ['responsive'], // defaults to ['responsive']
-    backdropFilter: ['responsive'], // defaults to ['responsive']
+    filter: ["responsive"], // defaults to ['responsive']
+    backdropFilter: ["responsive"], // defaults to ['responsive']
   },
 }

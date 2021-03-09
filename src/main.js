@@ -6,11 +6,9 @@ import NoteLayout from "~/layouts/Note.vue"
 
 // Import Global Styles
 import "~/assets/scss/main.scss"
-// import "~/vue-select/src/scss/vue-select.scss";
 
 // Import Global Plugins
 import VueScrollTo from "vue-scrollto"
-import vSelect from "vue-select"
 import InstantSearch from 'vue-instantsearch';
 
 export default function (Vue, { router, head, isClient ,appOptions }) {
@@ -20,7 +18,6 @@ export default function (Vue, { router, head, isClient ,appOptions }) {
   Vue.component("Fullscreen", FullscreenLayout)
   Vue.component("Homepage", HomepageLayout)
   Vue.component("Note", NoteLayout)
-  Vue.component("v-select", vSelect)
 
   // Set Plugins
   Vue.use(InstantSearch);
