@@ -38,6 +38,9 @@ export default {
 </script>
 
 <style lang="postcss">
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
 .stack {
   & > a {
     @apply bg-white shadow-md h-16 w-auto rounded-lg p-2 transform transition-all duration-300 cursor-pointer;

@@ -2,6 +2,7 @@
 @import "@ditdot-dev/vue-flow-form/dist/vue-flow-form.css";
 
 @tailwind base;
+
 body {
   @apply font-body;
   color: var(--color-text-default);

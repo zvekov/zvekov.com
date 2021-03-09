@@ -5,14 +5,13 @@ import HomepageLayout from "~/layouts/Homepage.vue"
 import NoteLayout from "~/layouts/Note.vue"
 
 // Import Global Styles
-import "~/assets/scss/main.scss"
+import "~/assets/scss/app.scss"
 
 // Import Global Plugins
 import VueScrollTo from "vue-scrollto"
-import InstantSearch from 'vue-instantsearch';
+import InstantSearch from "vue-instantsearch"
 
-export default function (Vue, { router, head, isClient ,appOptions }) {
-
+export default function(Vue, { router, head, isClient, appOptions }) {
   // Set Layouts & Components
   Vue.component("Layout", DefaultLayout)
   Vue.component("Fullscreen", FullscreenLayout)
@@ -20,7 +19,7 @@ export default function (Vue, { router, head, isClient ,appOptions }) {
   Vue.component("Note", NoteLayout)
 
   // Set Plugins
-  Vue.use(InstantSearch);
+  Vue.use(InstantSearch)
   Vue.use(VueScrollTo, {
     duration: 500,
     easing: "ease",
