@@ -6,21 +6,15 @@
         <slot />
       </main>
     </transition>
-    <LocaleSwitcher
-      class="bottom-0 left-0 hidden pl-2 md:flex md:mb-3 md:ml-4 md:fixed"
-    />
-    <Pogonya class="fixed bottom-0 right-0 mb-3 mr-4" style="z-index: -1" />
   </div>
 </template>
 <script>
-import Pogonya from "@/components/atoms/Pogonya";
 import HeaderNote from "./partials/HeaderNote";
 import LocaleSwitcher from "~/components/atoms/LocaleSwitcher";
 export default {
   components: {
     HeaderNote,
     LocaleSwitcher,
-    Pogonya,
   },
   metaInfo() {
     return {

@@ -1,4 +1,4 @@
-const robotstxtConfig = [
+const robotsTxt = [
   {
     use: "gridsome-plugin-robots",
     options: {
@@ -15,4 +15,4 @@ const robotstxtConfig = [
     },
   },
 ]
-module.exports = robotstxtConfig
+module.exports = robotsTxt

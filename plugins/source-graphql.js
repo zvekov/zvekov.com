@@ -1,4 +1,4 @@
-const sourceGraphqlConfig = [
+const sourceGraphql = [
   {
     use: "@gridsome/source-graphql",
     options: {
@@ -33,4 +33,4 @@ const sourceGraphqlConfig = [
     },
   },
 ]
-module.exports = sourceGraphqlConfig
+module.exports = sourceGraphql

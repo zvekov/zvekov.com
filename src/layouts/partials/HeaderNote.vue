@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex items-center justify-between max-w-2xl px-2 py-4 mx-auto xxs:p-4"
+    class="flex items-center justify-between max-w-2xl px-2 py-4 mx-auto xxs:p-4 h-24"
   >
     <transition name="fade">
-      <g-link class="flex py-6" :to="$tp('/notes/')">
+      <g-link :to="$tp('/notes/')">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"

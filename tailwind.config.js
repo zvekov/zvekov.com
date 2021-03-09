@@ -9,7 +9,7 @@ module.exports = {
     content: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
     options: {
       defaultExtractor: (content) => content.match(/[\w-/:%]+(?<!:)/g) || [],
-      safelist: [/hooper/, /ais-$/],
+      safelist: [/^col-span-/],
     },
   },
   prefix: "",

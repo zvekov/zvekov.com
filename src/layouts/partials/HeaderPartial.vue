@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center justify-between max-w-2xl px-2 py-4 mx-auto xxs:p-4"
+    class="flex items-center justify-between max-w-2xl px-2 py-4 mx-auto xxs:p-4 h-24"
   >
     <transition name="fade">
       <g-link class="flex" :to="$tp('/')">

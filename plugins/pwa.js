@@ -1,4 +1,4 @@
-const pwaConfig = [
+const pwa = [
   {
     use: "gridsome-plugin-pwa",
     options: {
@@ -45,4 +45,4 @@ const pwaConfig = [
     },
   },
 ]
-module.exports = pwaConfig
+module.exports = pwa

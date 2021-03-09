@@ -1,4 +1,4 @@
-const svgConfig = [
+const svg = [
   {
     use: "gridsome-plugin-svg",
     options: {
@@ -30,4 +30,4 @@ const svgConfig = [
     },
   },
 ]
-module.exports = svgConfig
+module.exports = svg

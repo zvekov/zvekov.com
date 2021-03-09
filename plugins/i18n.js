@@ -1,4 +1,4 @@
-const i18nConfig = [
+const i18n = [
   {
     use: "gridsome-plugin-i18n",
     options: {
@@ -33,4 +33,4 @@ const i18nConfig = [
   },
 ]
 
-module.exports = i18nConfig
+module.exports = i18n

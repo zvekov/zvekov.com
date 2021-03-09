@@ -1,4 +1,4 @@
-const sitemapConfig = [
+const sitemap = [
   {
     use: "@gridsome/plugin-sitemap",
     options: {
@@ -35,4 +35,4 @@ const sitemapConfig = [
     },
   },
 ]
-module.exports = sitemapConfig
+module.exports = sitemap

@@ -1,14 +1,23 @@
 <template>
-  <select v-model="currentLocale" @change="localeChanged">
-    <option v-for="locale in availableLocales" :key="locale" :value="locale">
-      {{ locale }}
-    </option>
-  </select>
-  <!-- <div>
-    <div v-for="locale in availableLocales" :key="locale">
-      <g-link :to="'/' +locale + $route.path">{{ locale }}</g-link>
-    </div>
-  </div> -->
+  <div>
+    <select v-model="currentLocale" @change="localeChanged">
+      <option v-for="locale in availableLocales" :key="locale" :value="locale">
+        {{ locale }}
+      </option>
+    </select>
+    <!-- <div>
+      <div class="flex flex-row">
+        <a
+          v-for="locale in availableLocales"
+          :key="locale"
+          @click="localeChanged"
+          class="px-1"
+        >
+          {{ locale }}
+        </a>
+      </div>
+    </div> -->
+  </div>
 </template>
 
 <script>

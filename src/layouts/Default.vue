@@ -1,26 +1,23 @@
 <template>
-  <div class="h-screen text-base xs:text-lg">
+  <div class="min-h-screen text-base xs:text-lg">
     <HeaderPartial />
     <transition name="fade" appear>
       <main>
         <slot />
       </main>
     </transition>
-    <LocaleSwitcher
-      class="bottom-0 left-0 hidden pl-2 md:flex md:mb-3 md:ml-4 md:fixed"
-    />
-    <Pogonya class="fixed bottom-0 right-0 mb-3 mr-4" style="z-index: -1" />
+    <div class="flex items-end justify-between max-w-2xl px-2 py-4 mx-auto flex-shrink">
+      <LocaleSwitcher class="hidden pl-2 md:flex md:mb-3" />
+    </div>
   </div>
 </template>
 <script>
-import Pogonya from "@/components/atoms/Pogonya";
 import HeaderPartial from "./partials/HeaderPartial";
 import LocaleSwitcher from "~/components/atoms/LocaleSwitcher";
 export default {
   components: {
     HeaderPartial,
     LocaleSwitcher,
-    Pogonya,
   },
   metaInfo() {
     return {

@@ -1,4 +1,4 @@
-const gtmConfig = [
+const gtm = [
   {
     use: "gridsome-plugin-gtm",
     options: {
@@ -8,4 +8,4 @@ const gtmConfig = [
     },
   },
 ]
-module.exports = gtmConfig
+module.exports = gtm

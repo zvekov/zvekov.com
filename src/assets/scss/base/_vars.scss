@@ -1,0 +1,21 @@
+:root {
+  --color-bg-default: #ffffff;
+  --color-bg-soft: #edf2f7;
+  --color-bg-softer: #e2e8f0;
+  --color-bg-inline-code: #edf2f7;
+
+  --color-text-soft: #a0aec0;
+  --color-text-default: #34485c;
+  --color-text-strong: #0e111a;
+}
+
+.theme-dark {
+  --color-bg-default: #1a202c;
+  --color-bg-soft: #4a5568;
+  --color-bg-softer: #718096;
+  --color-bg-inline-code: #4a5568;
+
+  --color-text-soft: #cbd5e0;
+  --color-text-default: #e2e8f0;
+  --color-text-strong: #ffffff;
+}

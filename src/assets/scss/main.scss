@@ -1,54 +1,7 @@
 /*! purgecss start ignore */
-:root {
-  --color-bg-default: #ffffff;
-  --color-bg-soft: #edf2f7;
-  --color-bg-softer: #e2e8f0;
-  --color-bg-inline-code: #edf2f7;
-
-  --color-text-soft: #a0aec0;
-  --color-text-default: #34485c;
-  --color-text-strong: #0e111a;
-}
-
-.theme-dark {
-  --color-bg-default: #1a202c;
-  --color-bg-soft: #4a5568;
-  --color-bg-softer: #718096;
-  --color-bg-inline-code: #4a5568;
-
-  --color-text-soft: #cbd5e0;
-  --color-text-default: #e2e8f0;
-  --color-text-strong: #ffffff;
-}
-
-@import "vue-select/src/scss/vue-select.scss";
 @import "@ditdot-dev/vue-flow-form/dist/vue-flow-form.css";
-// @import '@ditdot-dev/vue-flow-form/dist/vue-flow-form.theme-minimal.css';
 
 @tailwind base;
-
-a,
-button {
-  cursor: pointer;
-}
-code,
-kbd,
-pre,
-samp {
-  @apply text-white;
-}
-h1,
-h2 {
-  @apply py-3 leading-tight;
-}
-// body.default h1:before,
-// h2::before {
-//   @apply pr-2;
-//   content: "#";
-// }
-h3 {
-  @apply font-bold pr-2;
-}
 body {
   @apply font-body;
   color: var(--color-text-default);
@@ -69,9 +22,7 @@ body {
 /*! purgecss end ignore */
 
 @import "base/all";
-
-@tailwind components;
-
 @import "components/all";
 
+@tailwind components;
 @tailwind utilities;
