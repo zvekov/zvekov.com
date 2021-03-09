@@ -20,7 +20,7 @@
   "organisms": {
     "about_text": {
       "title": "Создаю",
-      "text": "<p>Single Page Apps (SPA), Progressive Web Apps (PWA), натыўныя i ўнiверсальныя прыкладаннi на аснове JAMstack.</p>"
+      "text": "<p>Single Page Apps (SPA), Progressive Web Apps (PWA), нативные и универсальные приложения на основе JAMstack.</p>"
     },
     "stack": {
       "title": "Использую"
