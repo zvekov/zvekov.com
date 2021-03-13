@@ -6,7 +6,7 @@
         v-for="work in $static.strapi.works"
         :key="work.id"
         :work="work"
-        class="shadow-md rounded-lg p-4 transform transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-xl"
+        class="shadow-md rounded-lg overflow-hidden transform transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-xl"
       />
     </div>
   </section>
@@ -18,6 +18,10 @@
         name
         link
         stack
+        cover {
+          url
+          previewUrl
+        }
       }
 	  }
   }

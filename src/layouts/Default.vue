@@ -1,13 +1,15 @@
 <template>
-  <div class="min-h-screen text-base xs:text-lg">
+  <div class="min-h-screen h-full text-base xs:text-lg flex flex-col justify-between">
+    <div>
     <HeaderPartial />
     <transition name="fade" appear>
-      <main>
+      <main class="md:mb-8">
         <slot />
       </main>
     </transition>
-    <div class="flex items-end justify-between max-w-2xl px-2 py-4 mx-auto flex-shrink">
-      <LocaleSwitcher class="hidden pl-2 md:flex md:mb-3" />
+    </div>    
+    <div class="max-w-2xl px-3 py-4 mx-auto w-full">
+      <LocaleSwitcher class="hidden md:flex md:mb-3" />
     </div>
   </div>
 </template>

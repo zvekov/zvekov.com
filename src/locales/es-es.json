@@ -20,7 +20,7 @@
   "organisms": {
     "about_text": {
       "title": "Yo creo",
-      "text": "<p>Single Page Apps (SPA), Progressive Web Apps (PWA), aplicaciones nativas y universales basadas en JAMstack.</p><p>Según la experiencia, los generadores estáticos junto con los headlees CMS dan buenos resultados para los sitios PWA y SPA. Estos sitios son rápidos por defecto.</p><p>Utilizo marcos JS, CSS y PHP para la implementación de tareas.</p><p>Prefiero las soluciones de código abierto, pero también uso desarrollos comerciales.</p><p>Me gusta el grupo de Vue y Laravel, que es una guía para el desarrollo de habilidades.</p>"
+      "text": "<p>Single Page Apps (SPA), Progressive Web Apps (PWA), aplicaciones nativas y universales basadas en JAMstack.</p>"
     },
     "stack": {
       "title": "Yo suelo"

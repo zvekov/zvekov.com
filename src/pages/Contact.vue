@@ -2,6 +2,7 @@
   <Layout>
     <div class="max-w-2xl mx-auto pb-16">
       <Messanagers class="px-4" />
+      <!-- <Community /> -->
       <!-- <Task class="px-4" /> -->
     </div>
   </Layout>
@@ -9,10 +10,12 @@
 <script>
 import Task from "~/components/organisms/Task";
 import Messanagers from "~/components/organisms/Messanagers";
+import Community from "~/components/organisms/Community";
 export default {
   components: {
     Task,
     Messanagers,
+    Community,
   },
   data() {
     return {
