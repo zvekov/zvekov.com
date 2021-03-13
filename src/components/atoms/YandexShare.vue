@@ -17,7 +17,7 @@ export default {
   props: ["dataSize", "dataImage"],
   data() {
     return {
-      lang: "ru",
+      lang: "en",
       dataServices:
         "telegram,whatsapp,viber,vkontakte,facebook,odnoklassniki,pinterest",
     };
