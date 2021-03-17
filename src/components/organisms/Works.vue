@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="works">
     <h2 class="text-2xl font-bold">{{ $t("organisms.works.title") }}</h2>
     <div class="grid md:grid-cols-2 gap-4">
       <WorkCard

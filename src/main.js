@@ -10,6 +10,7 @@ import "~/assets/scss/app.scss"
 // Import Global Plugins
 import VueScrollTo from "vue-scrollto"
 import InstantSearch from "vue-instantsearch"
+import VWave from 'v-wave'
 
 export default function(Vue, { router, head, isClient, appOptions }) {
   // Set Layouts & Components
@@ -23,7 +24,10 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   Vue.use(VueScrollTo, {
     duration: 500,
     easing: "ease",
-  })
+  } )
+  Vue.use(VWave, {
+    cancellationPeriod: '100'
+})
 
   // Set Head Attributes
   head.htmlAttrs = { lang: "ru", class: "min-h-full antialiased" }

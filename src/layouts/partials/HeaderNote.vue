@@ -19,7 +19,7 @@
       </g-link>
     </transition>
     <Navigation class="hidden pl-8 lowercase md:flex" />
-    <NavigationMobile class="fixed top-0 right-0 pt-8 pr-4 md:hidden" />
+    <!-- <NavigationMobile class="fixed top-0 right-0 pt-8 pr-4 md:hidden" /> -->
   </div>
 </template>
 <script>

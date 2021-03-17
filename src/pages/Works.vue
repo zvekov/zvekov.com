@@ -1,17 +1,14 @@
 <template>
   <Layout>
     <div class="max-w-2xl mx-auto">
-      <AboutText class="px-4 pb-4" />
-      <Works class="px-4 pb-16 hidden md:block" />
+      <Works class="px-4 pb-16" />
     </div>
   </Layout>
 </template>
 <script>
-import AboutText from "@/components/organisms/AboutText";
 import Works from "@/components/organisms/Works";
 export default {
   components: {
-    AboutText,
     Works,
   },
   data() {
@@ -34,7 +31,7 @@ export default {
             position: 2,
             item: {
               "@id": process.env.APP_URL + this.$route.path,
-              name: this.$t("atoms.links.about"),
+              name: this.$t("organisms.works.title"),
             },
           },
         ],
@@ -43,7 +40,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$t("pages.about.title"),
+      title: this.$t("organisms.works.title"),
       titleTemplate: "%s – " + this.$t("atoms.name"),
       script: [
         { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
@@ -55,7 +52,7 @@ export default {
         },
         {
           property: "og:title",
-          content: this.$t("pages.about.title") + " – " + this.$t("atoms.name"),
+          content: this.$t("organisms.works.title") + " – " + this.$t("atoms.name"),
         },
         {
           property: "og:description",

@@ -3,7 +3,7 @@
   <Note>
     <div class="flex flex-wrap">
       <div
-        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase other-links"
+        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase other-links mb-20 md:mb-0"
       >
         <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
           <div class="font-black">Useful Links</div>
@@ -48,7 +48,6 @@
             $page.strapi.notes[0].similars.length > 0 ||
             $page.strapi.notes[0].notes.length > 0
           "
-          class=""
         >
           <div class="font-black" v-if="$page.strapi.notes[0].similars">
             Similar Notes

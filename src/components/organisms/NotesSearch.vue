@@ -17,7 +17,7 @@
       <div>
         <ais-state-results>
           <template slot-scope="{ state: { query } }">
-            <ais-hits v-show="query.length > 0">
+            <ais-hits v-show="query.length > 0" class="mb-16">
               <div slot="item" slot-scope="{ item }" class="py-1 xs:py-2">
                 <g-link
                   :to="'/notes/' + item.slug + '/'"

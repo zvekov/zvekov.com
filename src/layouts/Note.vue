@@ -6,15 +6,18 @@
         <slot />
       </main>
     </transition>
+    <Navbar class="md:hidden fixed bottom-0 w-full" />
   </div>
 </template>
 <script>
 import HeaderNote from "./partials/HeaderNote";
 import LocaleSwitcher from "~/components/atoms/LocaleSwitcher";
+import Navbar from "~/components/organisms/Navbar";
 export default {
   components: {
     HeaderNote,
     LocaleSwitcher,
+    Navbar
   },
   metaInfo() {
     return {

@@ -10,10 +10,10 @@
         {{ $t("atoms.name") }}
       </h1>
       <Profession class="pb-4 text-base xs:text-lg" />
-      <Navigation class="flex text-base lowercase xs:text-lg" />
-      <div class="fixed bottom-0 right-0 pb-3 pr-4">
+      <Navigation class="hidden md:flex text-base lowercase xs:text-lg" />
+      <!-- <div class="fixed bottom-0 right-0 pb-3 pr-4">
         <Pogonya />
-      </div>
+      </div> -->
     </div>
   </Homepage>
 </template>

@@ -5,10 +5,15 @@
         <slot />
       </main>
     </transition>
+    <Navbar class="md:hidden fixed bottom-0 w-full" />
   </div>
 </template>
 <script>
+import Navbar from "~/components/organisms/Navbar";
 export default {
+  components: {
+    Navbar
+  },
   metaInfo() {
     return {
       link: [

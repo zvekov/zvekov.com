@@ -3,7 +3,7 @@
     <div>
     <HeaderPartial />
     <transition name="fade" appear>
-      <main class="md:mb-8">
+      <main class="mb-4 md:mb-8">
         <slot />
       </main>
     </transition>
@@ -11,13 +11,16 @@
     <div class="max-w-2xl px-3 py-4 mx-auto w-full">
       <LocaleSwitcher class="hidden md:flex md:mb-3" />
     </div>
+    <Navbar class="md:hidden fixed bottom-0 w-full" />
   </div>
 </template>
 <script>
 import HeaderPartial from "./partials/HeaderPartial";
 import LocaleSwitcher from "~/components/atoms/LocaleSwitcher";
+import Navbar from "~/components/organisms/Navbar";
 export default {
   components: {
+    Navbar,
     HeaderPartial,
     LocaleSwitcher,
   },

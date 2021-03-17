@@ -4,10 +4,10 @@
       <burger></burger>
     </nav>
     <sidebar>
-      <Navigation
+      <!-- <Navigation
         class="pb-16 flex flex-col text-center uppercase font-bold leading-loose text-xl xs:text-2xl"
         @click.native="closeSidebarPanel"
-      />
+      /> -->
       <LocaleSwitcher class="flex" @click.native="closeSidebarPanel" />
     </sidebar>
   </div>

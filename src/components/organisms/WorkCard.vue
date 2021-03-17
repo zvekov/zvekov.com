@@ -15,11 +15,11 @@
     <transition name="fade">
       <div
         v-if="hover || isMobile"
-        class="w-full h-full bg-white bg-opacity-80 p-4 mx-auto flex items-center flex-col justify-center"
+        class="w-full h-full bg-white bg-opacity-80 p-4 flex  flex-col justify-end"
       >
-        <span class="font-bold text-xl mx-auto">{{ work.name }}</span>
+        <span class="font-bold text-xl text-left">{{ work.name }}</span>
         <!-- <span class="text-code">Сайт для кабинета маникюра и педикюра</span> -->
-              <p v-if="work.stack" class="text-sm xs:text-xs md:text-code pb-0 text-center">{{ work.stack }}</p>
+              <p v-if="work.stack" class="text-sm xs:text-xs md:text-code pb-0 text-left">{{ work.stack }}</p>
       </div>
       <!-- {{ work }} -->
     </transition>
