@@ -11,7 +11,7 @@
     <div class="max-w-2xl px-3 py-4 mx-auto w-full">
       <LocaleSwitcher class="hidden md:flex md:mb-3" />
     </div>
-    <Navbar class="md:hidden fixed bottom-0 w-full" />
+    <Navbar />
   </div>
 </template>
 <script>

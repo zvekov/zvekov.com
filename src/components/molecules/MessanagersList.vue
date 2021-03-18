@@ -46,12 +46,11 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="postcss" scoped>
 svg {
-  transition: 0.2s all;
-  transform: translateY(0);
-}
-svg:hover {
-  transform: translateY(-0.3rem);
+  @apply transform duration-300 transition-all;
+  &:hover {
+    @apply scale-125;
+  }
 }
 </style>

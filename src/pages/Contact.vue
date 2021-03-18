@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <div class="max-w-2xl mx-auto pb-16">
-      <Messanagers class="px-4" />
+    <div class="max-w-2xl mx-auto pb-16 px-4">
+      <h1 class="text-2xl font-bold">{{ $t("organisms.messanagers.title") }}</h1>
+      <p class="mb-2">{{ $t("organisms.messanagers.for_contact") }}</p>
+      <MessanagersList class="flex justify-between max-w-xs pr-6" />
       <!-- <Community /> -->
       <!-- <Task class="px-4" /> -->
     </div>
@@ -9,12 +11,12 @@
 </template>
 <script>
 import Task from "~/components/organisms/Task";
-import Messanagers from "~/components/organisms/Messanagers";
 import Community from "~/components/organisms/Community";
+import MessanagersList from "@/components/molecules/MessanagersList";
 export default {
   components: {
     Task,
-    Messanagers,
+    MessanagersList,
     Community,
   },
   data() {

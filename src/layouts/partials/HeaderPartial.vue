@@ -9,29 +9,23 @@
       </g-link>
     </transition>
     <Navigation class="hidden pl-8 lowercase md:flex" />
-    <!-- <NavigationMobile class="fixed top-0 right-0 pt-8 pr-4 md:hidden" /> -->
   </div>
 </template>
 <script>
 import Logo from "@/components/atoms/Logo";
 import HeaderAbout from "@/components/molecules/HeaderAbout";
 import Navigation from "@/components/molecules/Navigation";
-import NavigationMobile from "@/components/molecules/navigation_mobile";
 import { store, mutations } from "~/store.js";
 export default {
   components: {
     Logo,
     HeaderAbout,
     Navigation,
-    NavigationMobile,
   },
   computed: {
     isPanelOpen() {
       return store.isNavOpen;
     },
-    // isNote() {
-    //   return this.$route.path === "/notes/" ? true : false;
-    // },
   },
   methods: {
     closeSidebarPanel: mutations.toggleNav,

@@ -6,7 +6,7 @@
         <slot />
       </main>
     </transition>
-    <Navbar class="md:hidden fixed bottom-0 w-full" />
+    <Navbar />
   </div>
 </template>
 <script>

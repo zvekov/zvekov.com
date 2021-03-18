@@ -11,15 +11,11 @@
       </h1>
       <Profession class="pb-4 text-base xs:text-lg" />
       <Navigation class="hidden md:flex text-base lowercase xs:text-lg" />
-      <!-- <div class="fixed bottom-0 right-0 pb-3 pr-4">
-        <Pogonya />
-      </div> -->
     </div>
   </Homepage>
 </template>
 <script>
 import Homepage from "~/layouts/Homepage.vue";
-import Pogonya from "@/components/atoms/Pogonya";
 import Logo from "@/components/atoms/Logo";
 import Profession from "@/components/atoms/Profession";
 import Navigation from "@/components/molecules/Navigation";
@@ -29,8 +25,7 @@ export default {
     Homepage,
     Logo,
     Profession,
-    Navigation,
-    Pogonya,
+    Navigation
   },
   data() {
     return {
