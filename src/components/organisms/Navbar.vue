@@ -44,10 +44,16 @@ export default {
 <style lang="postcss" scoped>
 ul {
   @apply bg-white grid grid-cols-4 justify-items-center border-t fixed bottom-0 w-full;
+  @screen landscape {
+    @apply grid-cols-1 border-t-0 border-l right-0 w-16 h-screen;
+  }
   & li {
     @apply w-full lowercase text-code;
     & > a {
       @apply flex flex-col items-center w-full pt-2 pb-1;
+        @screen landscape {
+          @apply p-0 h-full justify-center;
+      }
       & svg {
         @apply w-8 h-8;
       }

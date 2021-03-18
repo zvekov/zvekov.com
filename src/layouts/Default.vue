@@ -1,16 +1,16 @@
 <template>
   <div class="min-h-screen h-full text-base xs:text-lg flex flex-col justify-between">
-    <div>
+    <div class="page">
     <HeaderPartial />
     <transition name="fade" appear>
       <main class="mb-4 md:mb-8">
         <slot />
       </main>
     </transition>
-    </div>    
-    <div class="max-w-2xl px-3 py-4 mx-auto w-full">
+        <div class="max-w-2xl px-3 py-4 mx-auto w-full">
       <LocaleSwitcher class="hidden md:flex md:mb-3" />
     </div>
+    </div>    
     <Navbar />
   </div>
 </template>
@@ -39,12 +39,17 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="postcss">
 .fade-enter-active {
   transition: opacity 0.5s;
 }
 
 .fade-enter {
   opacity: 0;
+}
+.page {
+  @screen landscape {
+    max-width: calc(100% - 4rem)
+  }
 }
 </style>

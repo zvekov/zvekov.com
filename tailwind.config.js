@@ -23,6 +23,7 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
+      'landscape': { 'raw': '(orientation: landscape)' }
     },
     fontSize: {
       sm: "0.625rem",

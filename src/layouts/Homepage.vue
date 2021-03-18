@@ -1,10 +1,12 @@
 <template>
   <div class="text-base xs:text-lg">
+    <div class="page">
     <transition name="fade" appear>
       <main>
         <slot />
       </main>
     </transition>
+    </div>
     <Navbar />
   </div>
 </template>
