@@ -1,7 +1,7 @@
 <template>
   <section id="works">
     <h2 class="text-2xl font-bold">{{ $t("organisms.works.title") }}</h2>
-    <div class="grid md:grid-cols-2 gap-4">
+    <div class="grid landscape:grid-cols-2 md:grid-cols-2 gap-4">
       <WorkCard
         v-for="work in $static.strapi.works"
         :key="work.id"

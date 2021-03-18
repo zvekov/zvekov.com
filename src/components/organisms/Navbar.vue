@@ -51,14 +51,14 @@ ul {
     @apply w-full lowercase text-code;
     & > a {
       @apply flex flex-col items-center w-full pt-2 pb-1;
-        @screen landscape {
-          @apply p-0 h-full justify-center;
+      @screen landscape {
+        @apply p-0 h-full justify-center;
       }
       & svg {
         @apply w-8 h-8;
-          @screen landscape {
-    @apply mt-2;
-  }
+        @screen landscape {
+          @apply mt-2;
+        }
       }
       &.active {
         @apply bg-gray-300 bg-opacity-40;
@@ -66,7 +66,7 @@ ul {
     }
   }
   @screen md {
-    @apply hidden; 
+    @apply hidden;
   }
 }
 </style>
