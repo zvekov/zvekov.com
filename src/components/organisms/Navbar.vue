@@ -56,6 +56,9 @@ ul {
       }
       & svg {
         @apply w-8 h-8;
+          @screen landscape {
+    @apply mt-2;
+  }
       }
       &.active {
         @apply bg-gray-300 bg-opacity-40;
