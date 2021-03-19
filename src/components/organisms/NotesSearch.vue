@@ -6,6 +6,7 @@
           class="text-base border border-gray-700 rounded-md pointer"
           :placeholder="$t('organisms.search.placeholder')"
           type="search"
+          autofocus
         />
         <ClientOnly>
           <ais-powered-by
@@ -266,6 +267,7 @@ export default {
 }
 [class^="ais-"] {
   box-sizing: border-box;
+  @apply outline-none;
 }
 a[class^="ais-"] {
   text-decoration: none;
@@ -773,15 +775,13 @@ a[class^="ais-"] {
   position: relative;
 }
 .ais-SearchBox-input {
+  @apply rounded-lg relative w-full;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0.3rem 1.7rem;
-  width: 100%;
-  position: relative;
   background-color: #fff;
   border: 1px solid #c4c8d8;
-  border-radius: 5px;
 }
 .ais-SearchBox-input::-webkit-input-placeholder {
   color: #a5aed1;
@@ -875,6 +875,9 @@ a[class^="ais-"] {
 .ais-SearchBox-form input::placeholder {
   @apply opacity-100;
   color: #38485a;
+}
+.ais-SearchBox-form input:focus {
+  @apply shadow-none;
 }
 .ais-SearchBox-form input:placeholder-shown {
   @apply opacity-100;

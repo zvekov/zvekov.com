@@ -1,13 +1,18 @@
 <template>
   <Layout>
-    <NotesPage />
+  <div class="max-w-2xl mx-auto">
+    <section class="px-4">
+      <h1 class="text-2xl font-bold">{{ $t("organisms.search.title") }}</h1>
+    </section>
+    <NotesSearch class="px-4" />
+  </div>
   </Layout>
 </template>
 <script>
-import NotesPage from "~/components/pages/NotesPage";
+import NotesSearch from "@/components/organisms/NotesSearch";
 export default {
   components: {
-    NotesPage,
+    NotesSearch,
   },
   data() {
     return {
