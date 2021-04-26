@@ -13,18 +13,33 @@ module.exports = function(api) {
           notes {
             slug
           }
+          works {
+            slug
+          }
         }
       }
     `)
 
     const notes = data.strapi.notes
+    const works = data.strapi.works
 
+    // Create single note page
     notes.forEach((note) => {
       createPage({
         path: `/notes/${note.slug}`,
         component: "./src/templates/Note.vue",
         context: {
           slug: note.slug,
+        },
+      })
+    } )
+    // Create single work page
+    works.forEach((work) => {
+      createPage({
+        path: `/works/${work.slug}`,
+        component: "./src/templates/Work.vue",
+        context: {
+          slug: work.slug,
         },
       })
     })

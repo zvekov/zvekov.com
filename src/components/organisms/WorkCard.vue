@@ -1,7 +1,6 @@
 <template>
   <g-link
-    :href="work.link"
-    target="_blank"
+    :to="'/works/'+ work.slug + '/'"
     class="h-48"
     :class="{ hover: hover }"
     :title="work.name"

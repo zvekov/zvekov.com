@@ -18,6 +18,7 @@
         name
         link
         stack
+        slug
         cover {
           url
           previewUrl
