@@ -18,13 +18,13 @@
                 target="_blank"
                 class="flex items-center text-base hover:text-red-700"
               >
-                <span
+                <!-- <span
                   v-if="link.resource == 'github'"
                   class="flex justify-end w-6 mr-2"
                 >
                   <IconGithub class="w-4 h-4 mt-0 filter-grayscale" />
-                </span>
-                <span
+                </span> -->
+                <!-- <span
                   v-if="link.resource == 'npm'"
                   class="flex justify-end w-6 mr-2"
                 >
@@ -37,7 +37,7 @@
                   class="flex justify-end w-6 mr-2"
                 >
                   <IconLink class="w-4 h-3 filter-grayscale" />
-                </span>
+                </span> -->
                 {{ link.title }}
               </a>
             </li>
@@ -76,6 +76,20 @@
               >
                 {{ note.name }}
               </g-link>
+            </li>
+          </ul>
+        </div>
+                <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
+          <div class="font-black">Buy me a coffe</div>
+          <ul>
+            <li
+              class="opacity-50 hover:opacity-100"
+            >
+              <a
+                target="_blank"
+                class="flex items-center text-base hover:text-red-700"
+              >
+              </a>
             </li>
           </ul>
         </div>

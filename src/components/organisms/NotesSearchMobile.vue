@@ -2,7 +2,7 @@
   <div>
     <ais-instant-search :search-client="searchClient" index-name="prod_Notes">
       <div class="flex flex-col w-full mb-4 md:w-2/3">
-      <div class="fixed top-0 left-0 right-0 my-4 z-50 bg-white">
+      <div class="fixed top-0 left-0 right-0 my-4 z-50 bg-white ">
         <ais-search-box
           class="search-box text-base border border-gray-700 rounded-md pointer mx-auto"
           :placeholder="$t('organisms.search.placeholder')"
@@ -77,7 +77,7 @@ export default {
 };
 </script>
 <style lang="postcss">
-.ais-SearchBox {
+.search-box {
   width: calc(100vw - 2rem);
 }
 /*! purgecss start ignore */
