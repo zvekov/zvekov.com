@@ -1,13 +1,33 @@
 <template>
   <div class="text-base xs:text-lg h-screen">
-    <span class="fixed z-50 cursor-pointer top-0 right-0 mt-8 mr-4 md:mr-8">
+    <!-- <span class="fixed z-50 cursor-pointer top-0 right-0 mt-8 mr-4 md:mr-8">
       <a @click="$router.go(-1)">
         <div></div>
       </a>
-    </span>
+    </span> -->
     <slot />
+    <Navbar />
   </div>
 </template>
+<script>
+import Navbar from "~/components/organisms/Navbar";
+export default {
+  components: {
+    Navbar
+  },
+  metaInfo() {
+    return {
+      link: [
+        {
+          rel: "canonical",
+          href: process.env.APP_URL + this.$route.path,
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <style lang="postcss" scoped>
 a {
   cursor: pointer;

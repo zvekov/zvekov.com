@@ -19,7 +19,7 @@
       </g-link>
     </li>
     <li v-wave>
-      <g-link :to="$tp('/notes/')" :title="$t('atoms.links.notes')">
+      <g-link :to="$tp('/search/')" :title="$t('atoms.links.notes')">
         <NotesIcon />
         {{ $t("atoms.links.notes") }}
       </g-link>

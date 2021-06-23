@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <Layout>
-    <div class="max-w-2xl mx-auto px-4">
+    <div class="max-w-2xl mx-auto px-4 pb-16">
       <h1 v-if="work.name" class="text-2xl font-bold">
         {{ work.name }}
       </h1>

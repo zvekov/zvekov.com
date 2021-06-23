@@ -1,12 +1,9 @@
 <template>
-  <Layout>
-    <div class="max-w-2xl mx-auto">
-      <section class="px-4">
-        <h1 class="text-2xl font-bold">{{ $t("organisms.search.title") }}</h1>
-      </section>
+  <Fullscreen>
+    <div class="max-w-2xl mx-auto pt-8">
       <NotesSearch class="px-4" />
     </div>
-  </Layout>
+  </Fullscreen>
 </template>
 <script>
 import NotesSearch from "@/components/organisms/NotesSearch";

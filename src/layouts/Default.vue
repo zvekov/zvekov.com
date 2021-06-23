@@ -1,16 +1,25 @@
 <template>
-  <div class="min-h-screen h-full text-base xs:text-lg flex flex-col justify-between">
+  <div
+    class="
+      min-h-screen
+      h-full
+      text-base
+      xs:text-lg
+      flex flex-col
+      justify-between
+    "
+  >
     <div class="page">
-    <HeaderPartial />
-    <transition name="fade" appear>
-      <main class="mb-4 md:mb-8">
-        <slot />
-      </main>
-    </transition>
-        <div class="max-w-2xl px-3 py-4 mx-auto w-full">
-      <LocaleSwitcher class="hidden md:flex md:mb-3" />
+      <HeaderPartial v-if="!showHeader" />
+      <transition name="fade" appear>
+        <main class="mb-4 md:mb-8">
+          <slot />
+        </main>
+      </transition>
+      <div class="max-w-2xl px-3 py-4 mx-auto w-full">
+        <LocaleSwitcher class="hidden md:flex md:mb-3" />
+      </div>
     </div>
-    </div>    
     <Navbar />
   </div>
 </template>
@@ -49,7 +58,7 @@ export default {
 }
 .page {
   @screen landscape {
-    max-width: calc(100% - 4rem)
+    max-width: calc(100% - 4rem);
   }
 }
 </style>
