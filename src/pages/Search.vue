@@ -1,16 +1,16 @@
 <template>
   <Fullscreen>
-    <div class="max-w-2xl mx-auto pt-8">
-      <NotesSearch class="px-4" />
+    <div class="max-w-2xl mx-auto pt-4 relative">
+      <NotesSearchMobile class="px-4" />
     </div>
   </Fullscreen>
 </template>
 <script>
-import NotesSearch from "@/components/organisms/NotesSearch";
+import NotesSearchMobile from "@/components/organisms/NotesSearchMobile";
 export default {
   layout: "Fullscreen",
   components: {
-    NotesSearch,
+    NotesSearchMobile,
   },
   data() {
     return {

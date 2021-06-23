@@ -2,20 +2,22 @@
   <div>
     <ais-instant-search :search-client="searchClient" index-name="prod_Notes">
       <div class="flex flex-col w-full mb-4 md:w-2/3">
+      <div class="fixed top-0 left-0 right-0 my-4 z-50 bg-white">
         <ais-search-box
-          class="text-base border border-gray-700 rounded-md pointer sticky top-0"
+          class="search-box text-base border border-gray-700 rounded-md pointer mx-auto"
           :placeholder="$t('organisms.search.placeholder')"
           type="search"
           :autofocus="true"
         />
-        <ClientOnly>
+        </div>
+        <!-- <ClientOnly>
           <ais-powered-by
             theme="light"
             class="flex justify-end mt-2 ml-2/3 filter-grayscale"
           />
-        </ClientOnly>
+        </ClientOnly> -->
       </div>
-      <div>
+      <div class="mt-20 pb-8">
         <ais-state-results>
           <template slot-scope="{ state: { query } }">
             <ais-hits v-show="query.length > 0" class="mb-16">
@@ -75,6 +77,9 @@ export default {
 };
 </script>
 <style lang="postcss">
+.ais-SearchBox {
+  width: calc(100vw - 2rem);
+}
 /*! purgecss start ignore */
 .ais-Highlight-highlighted,
 .ais-Snippet-highlighted {
