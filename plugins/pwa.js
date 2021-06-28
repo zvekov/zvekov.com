@@ -11,7 +11,7 @@ const pwa = [
       // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
       manifestPath: "/manifest.json",
       title: "Yury Zvekov",
-      startUrl: "/notes/",
+      startUrl: "/search/",
       display: "standalone",
       statusBarStyle: "default",
       themeColor: "#ffffff",
