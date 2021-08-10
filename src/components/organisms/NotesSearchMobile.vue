@@ -1,10 +1,10 @@
 <template>
   <div>
     <ais-instant-search :search-client="searchClient" index-name="prod_Notes">
-      <div class="flex flex-col w-full mb-4 md:w-2/3">
+      <div class="flex flex-col w-full mb-4">
       <div class="search-header fixed top-0 left-0 right-0 py-4 z-50 bg-white bg-opacity-70">
         <ais-search-box
-          class="search-box text-base border border-gray-700 rounded-md pointer mx-auto"
+          class="search-box text-base border border-gray-700 rounded-md pointer mx-auto w-full"
           :placeholder="$t('organisms.search.placeholder')"
           type="search"
           autofocus
@@ -13,7 +13,7 @@
         <ClientOnly>
           <ais-powered-by
             theme="light"
-            class="flex justify-end mt-12 mr-1 ml-2/3 filter-grayscale"
+            class="flex justify-end mt-12 ml-2/3 filter-grayscale"
           />
         </ClientOnly>
       </div>
@@ -78,11 +78,12 @@ export default {
 </script>
 <style lang="postcss">
 .search-header {
+  @apply mx-auto max-w-2xl;
   	-webkit-backdrop-filter: blur(4px);
 	backdrop-filter: blur(4px);
 }
 .search-box {
-  width: calc(100vw - 2rem);
+  width: calc(100% - 2rem);
 }
 /*! purgecss start ignore */
 .ais-Highlight-highlighted,

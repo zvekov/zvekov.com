@@ -28,6 +28,10 @@
     "works": {
       "title": "Works"
     },
+    "community": {
+      "title": "Community",
+      "text": "Look, read, teach, be friends."
+    },
     "messanagers": {
       "title": "Get in touch",
       "for_contact": "To contact me, use one of the messengers.",

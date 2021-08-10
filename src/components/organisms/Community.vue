@@ -1,7 +1,7 @@
 <template>
   <div class="pt-12">
-    <h2 class="text-2xl font-bold">Community</h2>
-    <p>Look, read, teach, be friends.</p>
+    <h2 class="text-2xl font-bold">{{ $t("organisms.community.title") }}</h2>
+    <p>{{ $t("organisms.community.text") }}</p>
     <ul class="pt-2 flex items-center">
       <li class="pr-6">
         <a href="https://github.com/zvekov" target="_blank">

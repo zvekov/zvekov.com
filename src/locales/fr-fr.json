@@ -28,6 +28,10 @@
     "works": {
       "title": "Travaux"
     },
+    "community": {
+      "title": "Communauté",
+      "text": "Regardez, lisez, enseignez, soyez amis."
+    },
     "messanagers": {
       "title": "Entrer en contact",
       "for_contact": "Pour me contacter, utilisez l'un des messagers.",

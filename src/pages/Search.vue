@@ -6,7 +6,7 @@
   </Fullscreen>
 </template>
 <script>
-import NotesSearchMobile from "@/components/organisms/NotesSearchMobile";
+import NotesSearchMobile from "~/components/organisms/NotesSearchMobile";
 export default {
   layout: "Fullscreen",
   components: {
