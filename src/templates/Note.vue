@@ -80,7 +80,6 @@
           </ul>
         </div>
                 <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
-          <div class="font-black">Buy me a coffe</div>
           <ul>
             <li
               class="opacity-50 hover:opacity-100"
