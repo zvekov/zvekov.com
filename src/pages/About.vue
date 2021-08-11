@@ -2,7 +2,7 @@
   <Layout>
     <div class="max-w-2xl mx-auto">
       <AboutText class="px-4 pb-4" />
-      <Works class="px-4 pb-16 hidden md:block" />
+<!--      <Works class="px-4 pb-16 hidden md:block" />-->
     </div>
   </Layout>
 </template>

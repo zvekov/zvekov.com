@@ -12,7 +12,11 @@
         :stack="stack"
       />
     </div>
-  </div>
+    <h2 class="text-2xl font-bold">For the last month</h2>
+    <div class="mb-8">
+    <figure><embed src="https://wakatime.com/share/@zvekov/9ec93ffd-1d63-4de1-a88a-b9eaa0569750.svg"></embed></figure>
+    </div>
+    </div>
 </template>
 <static-query>
   query{
