@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select v-model="currentLocale" @change="localeChanged">
+    <select v-model="currentLocale" @change="localeChanged" class="bg-gray-200 px-3 py-1 rounded-2xl">
       <option v-for="locale in availableLocales" :key="locale" :value="locale">
         {{ locale }}
       </option>

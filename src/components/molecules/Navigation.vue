@@ -1,13 +1,13 @@
 <template>
-  <ul>
-    <li class="px-3">
-      <About class="hover:text-red-700" />
+  <ul class="grid grid-flow-col gap-1">
+    <li>
+      <About class="px-3 py-1 hover:bg-gray-200 rounded-2xl" />
     </li>
-    <li class="px-3">
-      <Contact class="hover:text-red-700" />
+    <li>
+      <Contact class="px-3 py-1 hover:bg-gray-200 rounded-2xl" />
     </li>
-    <li class="px-3">
-      <Notes class="hover:text-red-700" />
+    <li>
+      <Notes class="px-3 py-1 hover:bg-gray-200 rounded-2xl" />
     </li>
   </ul>
 </template>
@@ -25,15 +25,9 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .active {
-  @apply text-red-700;
+  @apply bg-gray-200;
 }
 .sidebar-panel a.active {
   color: inherit;
 }
-/* a {
-  @apply py-1 px-2 bg-opacity-10;
-}
-a:hover {
-  @apply bg-black text-white;
-} */
 </style>
