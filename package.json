@@ -1,44 +1,24 @@
 {
-  "name": "zvekov.com",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "gridsome build",
-    "dev": "gridsome develop",
-    "explore": "gridsome explore"
-  },
-  "dependencies": {
-    "@ditdot-dev/vue-flow-form": "^1.1.7",
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "@gridsome/plugin-sitemap": "^0.4.0",
-    "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/source-graphql": "^0.1.0",
-    "algoliasearch": "^4.5.1",
-    "babel-runtime": "^6.26.0",
-    "gridsome": "^0.7.23",
-    "gridsome-plugin-gtm": "^0.1.1",
-    "gridsome-plugin-i18n": "^1.6.0",
-    "gridsome-plugin-image-cdn": "^0.1.6",
-    "gridsome-plugin-pwa": "^0.0.18",
-    "gridsome-plugin-robots": "^0.2.1",
-    "gridsome-plugin-tailwindcss": "^3.0.1",
-    "instantsearch.css": "^7.4.5",
-    "mobile-device-detect": "^0.4.3",
-    "moment": "^2.27.0",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.1",
-    "sass": "^1.26.3",
-    "sass-loader": "^8.0.2",
-    "tailwindcss-dark-mode": "^1.1.7",
-    "tailwindcss-filters": "^3.0.0",
-    "v-wave": "^1.2.8",
-    "vue-instantsearch": "^3.4.2",
-    "vue-markdown": "^2.2.4",
-    "vue-scrollto": "^2.18.1"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "gridsome-plugin-svg": "^0.0.14"
-  },
-  "peerDependencies": {
-    "graphql": "^15.5.0"
+    "@egoist/tailwindcss-icons": "^1.7.1",
+    "@iconify-json/grommet-icons": "^1.1.10",
+    "@iconify-json/heroicons": "^1.1.19",
+    "@nuxt/image": "^1.1.0",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.10.1",
+    "nuxt": "^3.8.2",
+    "tailwindcss": "^3.4.0",
+    "vue": "^3.3.12",
+    "vue-router": "^4.2.5"
   }
 }
