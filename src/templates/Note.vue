@@ -16,7 +16,7 @@
               <a
                   :href="link.url"
                   target="_blank"
-                  class="truncate flex items-center text-base hover:text-red-700"
+                  class="flex items-center text-base hover:text-red-700"
               >
                 <!-- <span
                   v-if="link.resource == 'github'"
@@ -60,7 +60,7 @@
             >
               <g-link
                   :to="'/notes/' + note.slug + '/'"
-                  class="truncate flex items-center hover:text-red-700 lg:text-base"
+                  class="flex items-center hover:text-red-700 lg:text-base"
               >
                 {{ note.name }}
               </g-link>
