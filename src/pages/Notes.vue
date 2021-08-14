@@ -1,15 +1,16 @@
 <template>
   <Layout>
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-3xl mx-auto">
       <section class="px-4">
         <h1 class="text-2xl font-bold">{{ $t("organisms.search.title") }}</h1>
       </section>
-      <NotesSearch class="px-4" />
+      <NotesSearch class="px-4"/>
     </div>
   </Layout>
 </template>
 <script>
 import NotesSearch from "@/components/organisms/NotesSearch";
+
 export default {
   layout: "Fullscreen",
   components: {
@@ -46,7 +47,7 @@ export default {
       title: this.$t("pages.notes.title"),
       titleTemplate: "%s – " + this.$t("atoms.name"),
       script: [
-        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+        {innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json"},
       ],
       meta: [
         {
@@ -56,7 +57,7 @@ export default {
         {
           property: "og:title",
           content:
-            this.$t("pages.briefing.title") + " – " + this.$t("atoms.name"),
+              this.$t("pages.briefing.title") + " – " + this.$t("atoms.name"),
         },
         {
           property: "og:description",

@@ -12,6 +12,7 @@
 
 <script>
 import notesQuery from "@/apollo/queries/note/notes"
+
 export default {
   nuxtI18n: false,
   data() {

@@ -1,12 +1,13 @@
 <template>
   <Fullscreen>
-    <div class="max-w-2xl mx-auto pt-4 relative">
-      <NotesSearchMobile class="px-4" />
+    <div class="max-w-3xl mx-auto pt-4 relative">
+      <NotesSearchMobile class="px-4"/>
     </div>
   </Fullscreen>
 </template>
 <script>
 import NotesSearchMobile from "~/components/organisms/NotesSearchMobile";
+
 export default {
   layout: "Fullscreen",
   components: {
@@ -43,7 +44,7 @@ export default {
       title: this.$t("pages.notes.title"),
       titleTemplate: "%s – " + this.$t("atoms.name"),
       script: [
-        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+        {innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json"},
       ],
       meta: [
         {
@@ -53,7 +54,7 @@ export default {
         {
           property: "og:title",
           content:
-            this.$t("pages.briefing.title") + " – " + this.$t("atoms.name"),
+              this.$t("pages.briefing.title") + " – " + this.$t("atoms.name"),
         },
         {
           property: "og:description",

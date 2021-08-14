@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <div class="max-w-2xl mx-auto">
-      <Works class="px-4 pb-16" />
+    <div class="max-w-3xl mx-auto">
+      <Works class="px-4 pb-16"/>
     </div>
   </Layout>
 </template>
 <script>
 import Works from "@/components/organisms/Works";
+
 export default {
   components: {
     Works,
@@ -43,7 +44,7 @@ export default {
       title: this.$t("organisms.works.title"),
       titleTemplate: "%s – " + this.$t("atoms.name"),
       script: [
-        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+        {innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json"},
       ],
       meta: [
         {

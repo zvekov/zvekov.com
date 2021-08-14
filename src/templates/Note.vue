@@ -3,20 +3,20 @@
   <Note>
     <div class="flex flex-wrap">
       <div
-        class="order-2 w-full max-w-2xl px-6 pb-4 mx-auto lowercase other-links mb-20 md:mb-0"
+          class="order-2 w-full max-w-3xl px-6 pb-4 mx-auto lowercase other-links mb-20 md:mb-0"
       >
         <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
           <div class="font-black">Useful Links</div>
           <ul>
             <li
-              v-for="link in $page.strapi.notes[0].usefulLinks"
-              v-bind:key="link.id"
-              class="opacity-50 hover:opacity-100"
+                v-for="link in $page.strapi.notes[0].usefulLinks"
+                v-bind:key="link.id"
+                class="opacity-50 hover:opacity-100"
             >
               <a
-                :href="link.url"
-                target="_blank"
-                class="flex items-center text-base hover:text-red-700"
+                  :href="link.url"
+                  target="_blank"
+                  class="truncate flex items-center text-base hover:text-red-700"
               >
                 <!-- <span
                   v-if="link.resource == 'github'"
@@ -44,7 +44,7 @@
           </ul>
         </div>
         <div
-          v-if="
+            v-if="
             $page.strapi.notes[0].similars.length > 0 ||
             $page.strapi.notes[0].notes.length > 0
           "
@@ -54,46 +54,50 @@
           </div>
           <ul>
             <li
-              v-for="note in $page.strapi.notes[0].similars"
-              v-bind:key="note.id"
-              class="opacity-50 hover:opacity-100"
+                v-for="note in $page.strapi.notes[0].similars"
+                v-bind:key="note.id"
+                class="opacity-50 hover:opacity-100"
             >
               <g-link
-                :to="'/notes/' + note.slug + '/'"
-                class="flex items-center hover:text-red-700 lg:text-base"
+                  :to="'/notes/' + note.slug + '/'"
+                  class="truncate flex items-center hover:text-red-700 lg:text-base"
               >
                 {{ note.name }}
               </g-link>
             </li>
             <li
-              v-for="note in $page.strapi.notes[0].notes"
-              v-bind:key="note.id"
-              class="opacity-50 hover:opacity-100"
+                v-for="note in $page.strapi.notes[0].notes"
+                v-bind:key="note.id"
+                class="opacity-50 hover:opacity-100"
             >
               <g-link
-                :to="'/notes/' + note.slug"
-                class="flex items-center hover:text-red-700 lg:text-base"
+                  :to="'/notes/' + note.slug"
+                  class="flex items-center hover:text-red-700 lg:text-base"
               >
                 {{ note.name }}
               </g-link>
             </li>
           </ul>
         </div>
-                <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
+        <div v-if="$page.strapi.notes[0].usefulLinks.length > 0" class="pb-4">
           <ul>
             <li
-              class="opacity-50 hover:opacity-100"
+                class="opacity-50 hover:opacity-100"
             >
               <a
-                target="_blank"
-                class="flex items-center text-base hover:text-red-700"
+                  target="_blank"
+                  class="flex items-center text-base hover:text-red-700"
               >
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="order-1 w-full max-w-2xl mx-auto">
+      <div class="order-1 w-full max-w-3xl mx-auto"
+           :class="
+            $page.strapi.notes[0].similars.length > 0 || $page.strapi.notes[0].notes.length > 0
+             ? 'xl:pr-8'
+             : null">
         <section class="px-4">
           <div class="flex flex-wrap">
             <h1 v-if="$page.strapi.notes[0].name" class="text-2xl font-bold">
@@ -101,20 +105,20 @@
             </h1>
             <div class="flex items-center justify-between w-full pb-4">
               <div
-                v-if="$page.strapi.notes[0].updated_at"
-                class="text-base opacity-50"
+                  v-if="$page.strapi.notes[0].updated_at"
+                  class="text-base opacity-50"
               >
                 updated:
                 {{ $page.strapi.notes[0].updated_at | dateFormat }}
               </div>
               <div>
-                <YandexShare />
+                <YandexShare/>
               </div>
             </div>
             <VueMarkdown
-              v-if="$page.strapi.notes[0].content"
-              :source="$page.strapi.notes[0].content"
-              class="w-full pb-4 content"
+                v-if="$page.strapi.notes[0].content"
+                :source="$page.strapi.notes[0].content"
+                class="w-full pb-4 content"
             />
           </div>
         </section>
@@ -123,33 +127,33 @@
   </Note>
 </template>
 <page-query>
-  query ($slug: String!) {
-    strapi {
-      notes(where: { slug: $slug }) {
-        slug
-        name
-        content
-        updated_at
-        description
-        usefulLinks {
-          id
-          title
-          url
-          resource
-        }
-        similars {
-          id
-          name
-          slug
-        }
-        notes {
-          id
-          name
-          slug
-        }
-      }
-	  }
-  }
+query ($slug: String!) {
+strapi {
+notes(where: { slug: $slug }) {
+slug
+name
+content
+updated_at
+description
+usefulLinks {
+id
+title
+url
+resource
+}
+similars {
+id
+name
+slug
+}
+notes {
+id
+name
+slug
+}
+}
+}
+}
 </page-query>
 <script>
 import moment from "moment";
@@ -219,7 +223,7 @@ export default {
       title: this.$page.strapi.notes[0].name,
       titleTemplate: "%s – " + this.$t("pages.notes.title"),
       script: [
-        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+        {innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json"},
       ],
       meta: [
         {
@@ -257,24 +261,29 @@ export default {
 .content a {
   border-bottom: 1px dotted;
 }
+
 .content h2 {
   @apply text-2xl font-bold;
 }
+
 .content h3 {
   @apply text-xl font-bold;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+
 .content ol {
   list-style: decimal;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
 }
+
 .content ul {
   list-style: disc;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
 }
+
 .content li {
   @apply pb-1;
 }

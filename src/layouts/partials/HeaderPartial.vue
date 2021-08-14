@@ -1,21 +1,22 @@
 <template>
-  <div
-    class="flex items-center justify-between max-w-2xl px-2 py-4 mx-auto xxs:p-4 h-24"
+  <header
+      class="w-full flex items-center justify-between max-w-3xl px-2 py-4 mx-auto xxs:p-4 h-24"
   >
     <transition name="fade">
       <g-link class="flex" :to="$tp('/')">
-        <g-image src="~/assets/img/logo.jpg" :alt="$t('atoms.name')" />
-        <HeaderAbout class="pl-4" />
+        <g-image src="~/assets/img/logo.jpg" :alt="$t('atoms.name')"/>
+        <HeaderAbout class="pl-4"/>
       </g-link>
     </transition>
-    <Navigation class="hidden pl-8 lowercase md:flex" />
-  </div>
+    <Navigation class="hidden pl-8 lowercase md:flex"/>
+  </header>
 </template>
 <script>
 import Logo from "@/components/atoms/Logo";
 import HeaderAbout from "@/components/molecules/HeaderAbout";
 import Navigation from "@/components/molecules/Navigation";
-import { store, mutations } from "~/store.js";
+import {store, mutations} from "~/store.js";
+
 export default {
   components: {
     Logo,
@@ -34,7 +35,7 @@ export default {
       if (store.isNavOpen) {
         mutations.toggleNav();
       }
-      this.$router.push({ name: "index" });
+      this.$router.push({name: "index"});
     },
   },
 };

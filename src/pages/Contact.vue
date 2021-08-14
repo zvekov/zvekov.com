@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <div class="max-w-2xl mx-auto pb-16 px-4">
+    <div class="max-w-3xl mx-auto pb-16 px-4">
       <h1 class="text-2xl font-bold">
         {{ $t("organisms.messanagers.title") }}
       </h1>
       <p class="mb-2">{{ $t("organisms.messanagers.for_contact") }}</p>
-      <MessanagersList class="flex justify-between max-w-xs pr-6" />
-      <Community />
+      <MessanagersList class="flex justify-between max-w-xs pr-6"/>
+      <Community/>
       <!-- <Task class="px-4" /> -->
     </div>
   </Layout>
@@ -15,6 +15,7 @@
 import Task from "~/components/organisms/Task";
 import Community from "~/components/organisms/Community";
 import MessanagersList from "@/components/molecules/MessanagersList";
+
 export default {
   components: {
     Task,
@@ -53,7 +54,7 @@ export default {
       title: this.$t("pages.contact.title"),
       titleTemplate: "%s – " + this.$t("atoms.name"),
       script: [
-        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+        {innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json"},
       ],
       meta: [
         {
@@ -63,7 +64,7 @@ export default {
         {
           property: "og:title",
           content:
-            this.$t("pages.contact.title") + " – " + this.$t("atoms.name"),
+              this.$t("pages.contact.title") + " – " + this.$t("atoms.name"),
         },
         {
           property: "og:description",

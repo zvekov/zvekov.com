@@ -1,14 +1,15 @@
 <template>
   <Layout>
-    <div class="max-w-2xl mx-auto">
-      <AboutText class="px-4 pb-4" />
-<!--      <Works class="px-4 pb-16 hidden md:block" />-->
+    <div class="max-w-3xl mx-auto">
+      <AboutText class="px-4 pb-4"/>
+      <!--      <Works class="px-4 pb-16 hidden md:block" />-->
     </div>
   </Layout>
 </template>
 <script>
 import AboutText from "@/components/organisms/AboutText";
 import Works from "@/components/organisms/Works";
+
 export default {
   components: {
     AboutText,
@@ -46,7 +47,7 @@ export default {
       title: this.$t("pages.about.title"),
       titleTemplate: "%s – " + this.$t("atoms.name"),
       script: [
-        { innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json" },
+        {innerHTML: JSON.stringify(this.jsonld), type: "application/ld+json"},
       ],
       meta: [
         {
