@@ -37,4 +37,8 @@ export default defineNuxtConfig({
             "process.browser": {},
         },
     },
+    experimental: {
+        // asyncEntry: true,
+        inlineSSRStyles: false
+    },
 })
