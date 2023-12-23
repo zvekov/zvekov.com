@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppFooter from "@/components/AppFooter.vue";
+import AppHeader from "@/components/AppHeader.vue";
 
 const img = useImage()
 const icon = computed(() => {
@@ -10,7 +11,8 @@ useHead({
 });
 </script>
 <template>
-  <div>
+  <div class="flex flex-col min-h-[100svh]">
+    <AppHeader/>
     <LazyNuxtPage/>
     <AppFooter/>
   </div>

@@ -11,7 +11,7 @@
 
 <style module="footer">
 .root {
-  @apply absolute bottom-0 left-0 right-0 w-full flex justify-center p-3 text-[10px] text-center flex-col;
+  @apply w-full flex justify-center p-3 text-[10px] text-center flex-col;
 
   & a {
     @apply opacity-40 hover:opacity-100 transition-all mx-auto mb-1;
