@@ -15,5 +15,26 @@ export default defineNuxtConfig({
     ],
     image: {
         domains: ["avatars.githubusercontent.com"]
-    }
+    },
+    routeRules: {
+        "/": {prerender: true},
+    },
+    vite: {
+        logLevel: "info",
+        optimizeDeps: {
+            include: ["vue"],
+            force: true,
+        },
+        css: {
+            modules: {
+                generateScopedName: "[hash:5]",
+            }
+        },
+        build: {
+            target: "esnext",
+        },
+        define: {
+            "process.browser": {},
+        },
+    },
 })
