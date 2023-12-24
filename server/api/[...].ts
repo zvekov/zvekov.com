@@ -15,11 +15,8 @@ router.post('/message', defineEventHandler({
                     Accept: 'application/json',
                     'Content-Type': 'application/json; charset=UTF-8',
                 }
-            });
-            console.log(body);
-            console.log(url);
-            console.log(result);
-            if (result) {
+            }) as any;
+            if (result?.ok) {
                 return {
                     status: 200,
                     statusMessage: 'Message sent successfully',

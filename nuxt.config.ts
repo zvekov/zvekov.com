@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         }
     },
     modules: [
+        "@nuxt/ui",
         "@nuxt/image",
         "@nuxtjs/tailwindcss"
     ],
@@ -40,5 +41,5 @@ export default defineNuxtConfig({
     experimental: {
         // asyncEntry: true,
         inlineSSRStyles: false
-    },
+    }
 })

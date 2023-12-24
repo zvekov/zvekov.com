@@ -14,11 +14,11 @@
   @apply w-full flex justify-center p-3 text-[10px] text-center flex-col;
 
   & a {
-    @apply opacity-40 hover:opacity-100 transition-all mx-auto mb-1;
+    @apply opacity-40 hover:opacity-100 transition-all mx-auto mb-1 h-5;
   }
 
   & span {
-    @apply text-black/40;
+    @apply opacity-40;
   }
 }
 </style>

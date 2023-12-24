@@ -11,13 +11,13 @@ useHead({
 });
 </script>
 <template>
-  <div :class="app.root">
+  <div :class="app.root"
+       class="bg-white text-black dark:text-white dark:bg-[#212121]">
     <AppHeader/>
     <LazyNuxtPage/>
     <AppFooter/>
   </div>
 </template>
-
 <style module="app">
 .root {
   @apply flex flex-col min-h-[100svh];

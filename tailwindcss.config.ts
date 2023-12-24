@@ -2,6 +2,7 @@ const {iconsPlugin, getIconCollections} = require("@egoist/tailwindcss-icons");
 import type {Config} from "tailwindcss";
 
 export default <Partial<Config>>{
+    darkMode: ["class", "[class~='dark']"],
     content: ["./**/*.{vue,js,ts,jsx,tsx}"],
     plugins: [
         iconsPlugin({

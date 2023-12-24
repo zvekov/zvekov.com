@@ -23,7 +23,22 @@ useSeoMeta({
     <!--      </ul>-->
   </main>
 </template>
+<style>
+.slide-up {
+  &-enter-active,
+  &-leave-active {
+    @apply transition-all duration-200 transform-gpu;
+  }
 
+  &-enter-from {
+    transform: translateY(100%);
+  }
+
+  &-leave-to {
+    transform: translateY(100%);
+  }
+}
+</style>
 <style module="index">
 .root {
   @apply flex flex-col gap-1 text-center items-center justify-center flex-1;
