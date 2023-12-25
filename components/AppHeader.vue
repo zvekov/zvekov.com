@@ -11,6 +11,9 @@ const isDark = computed({
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
   }
 });
+const toggleColorMode = () => {
+  isDark.value = !isDark.value;
+}
 const showModal = ref<boolean>(false);
 const textareaEl = ref<HTMLTextAreaElement | null>(null);
 const openModal = () => {
@@ -73,7 +76,7 @@ const sendMessage = async () => {
       Send message
     </button>
     <UIcon :name="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun'" class="ml-auto w-6 h-6 cursor-pointer"
-           @click="isDark = !isDark"/>
+           @click="toggleColorMode"/>
     <Teleport to="body">
       <transition name="slide-up">
         <div v-if="showModal"
@@ -87,7 +90,7 @@ const sendMessage = async () => {
               Cancel
             </button>
           </div>
-          <div class="flex flex-col items-center gap-3 w-full md:max-w-[400px] px-3 h-full md:justify-center">
+          <div class="h-fit flex flex-col items-center gap-3 w-full md:max-w-[400px] px-3 h-full md:justify-center">
             <template v-if="state.error">
               <div>
                 <div class="w-full text-center pb-2">
