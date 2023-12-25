@@ -151,7 +151,7 @@ const sendMessage = async () => {
                 <span class="text-black/70 dark:text-white/70 text-[11px]">Feedback Method</span>
                 <ul class="grid grid-cols-2 gap-3 mt-1">
                   <li class="w-full h-12 block flex items-center justify-center rounded-md gap-2 text-sm cursor-pointer transition-all"
-                      :class="state.contactMethod === 'Telegram' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-300' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
+                      :class="state.contactMethod === 'Telegram' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-400 dark:text-indigo-300' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
                       @click="state.contactMethod = 'Telegram'; state.contactMethodValue = '';">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                       <path fill="currentColor"
@@ -160,7 +160,7 @@ const sendMessage = async () => {
                     Telegram
                   </li>
                   <li class="w-full h-12 block flex items-center justify-center rounded-md gap-2 text-sm cursor-pointer transition-all"
-                      :class="state.contactMethod === 'Email' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-300' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
+                      :class="state.contactMethod === 'Email' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-400 dark:text-indigo-300' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
                       @click="state.contactMethod = 'Email'; state.contactMethodValue = '';">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                       <path fill="currentColor"
