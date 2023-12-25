@@ -1,5 +1,6 @@
 <template>
   <footer :class="footer.root">
+    {{ data }}
     <a href="https://wakatime.com/@b4c85a5e-1977-4c82-8f69-188ee9bb7c71" target="_blank" rel="nofollow noopener">
       <img
           src="https://wakatime.com/badge/user/b4c85a5e-1977-4c82-8f69-188ee9bb7c71.svg"

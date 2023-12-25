@@ -122,7 +122,7 @@ const sendMessage = async () => {
                 <textarea ref="textareaEl"
                           v-model="state.message"
                           maxlength="200"
-                          class="text-[15px] border border-black/20 bg-white/50 dark:bg-white/10 dark:border-white/20 rounded-md px-3 py-2 min-h-[120px] resize-none outline-none focus:ring-2 ring-indigo-400"/>
+                          class="text-[15px] border border-black/20 bg-white/50 dark:bg-white/10 dark:border-white/20 rounded-md px-3 py-2 min-h-[120px] resize-none outline-none appearance-none focus:ring-2 ring-indigo-400"/>
                 <div class="flex items-center justify-between pt-1 opacity-70">
                   <span
                       class="text-black/70 dark:text-white/70 text-[10px] leading-none"
@@ -135,7 +135,7 @@ const sendMessage = async () => {
               <label class="w-full flex flex-col gap-1">
                 <span class="text-black/70 dark:text-white/70 text-[11px]">Name</span>
                 <input v-model="state.name" autocomplete="name" type="text" maxlength="40"
-                       class="text-[15px] border border-black/20 bg-white/50 dark:bg-white/10 dark:border-white/20 rounded-md px-3 h-12 outline-none focus:ring-2 ring-indigo-400"/>
+                       class="text-[15px] border border-black/20 bg-white/50 dark:bg-white/10 dark:border-white/20 rounded-md px-3 h-12 outline-none appearance-none focus:ring-2 ring-indigo-400"/>
                 <div class="flex items-center justify-between pt-1 opacity-70">
                   <span
                       class="text-black/70 dark:text-white/70 text-[10px] leading-none"
@@ -149,7 +149,7 @@ const sendMessage = async () => {
                 <span class="text-black/70 dark:text-white/70 text-[11px]">Feedback Method</span>
                 <ul class="grid grid-cols-2 gap-3 mt-1">
                   <li class="w-full h-12 block flex items-center justify-center rounded-md gap-2 text-sm cursor-pointer transition-all"
-                      :class="state.contactMethod === 'Telegram' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-500' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
+                      :class="state.contactMethod === 'Telegram' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-300' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
                       @click="state.contactMethod = 'Telegram'; state.contactMethodValue = '';">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                       <path fill="currentColor"
@@ -158,7 +158,7 @@ const sendMessage = async () => {
                     Telegram
                   </li>
                   <li class="w-full h-12 block flex items-center justify-center rounded-md gap-2 text-sm cursor-pointer transition-all"
-                      :class="state.contactMethod === 'Email' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-500' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
+                      :class="state.contactMethod === 'Email' ? 'ring-2 dark:ring-indigo-400 ring-indigo-400 bg-indigo-50 dark:bg-white/10 text-indigo-300' : 'bg-gray-200 dark:bg-white/10 dark:ring-white/50 hover:ring-2 ring-black/50'"
                       @click="state.contactMethod = 'Email'; state.contactMethodValue = '';">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                       <path fill="currentColor"
@@ -173,7 +173,7 @@ const sendMessage = async () => {
                          v-model="state.contactMethodValue"
                          :autocomplete="state.contactMethod === 'Telegram' ? '' : 'email'"
                          maxlength="40"
-                         class="text-[15px] border border-black/20 bg-white/50 dark:bg-white/10 dark:border-white/20 rounded-md pr-3 h-12 w-full outline-none focus:ring-2 ring-indigo-400"
+                         class="text-[15px] border border-black/20 bg-white/50 dark:bg-white/10 dark:border-white/20 rounded-md pr-3 h-12 w-full appearance-none outline-none focus:ring-2 ring-indigo-400"
                          :class="state.contactMethod === 'Telegram' ? 'pl-[49px]' : 'pl-3'"/>
 
                 </div>
@@ -208,5 +208,9 @@ const sendMessage = async () => {
   & > a {
     @apply opacity-70 hover:opacity-100 transition-all;
   }
+}
+
+input, textarea {
+
 }
 </style>
