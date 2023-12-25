@@ -14,10 +14,12 @@ const isDark = computed({
 const showModal = ref<boolean>(false);
 const textareaEl = ref<HTMLTextAreaElement | null>(null);
 const openModal = () => {
-  showModal.value = true;
-  setTimeout(() => {
-    textareaEl.value?.focus();
-  }, 100)
+  new Promise(resolve => {
+    showModal.value = true;
+    resolve(showModal.value);
+  }).then(() => {
+    textareaEl.value?.focus({preventScroll: true});
+  });
 }
 const closeModal = () => {
   showModal.value = false;
@@ -75,7 +77,7 @@ const sendMessage = async () => {
     <Teleport to="body">
       <transition name="slide-up">
         <div v-if="showModal"
-             class="fixed top-0 left-0 right-0 bottom-0 flex items-start md:items-center justify-center bg-white/80 dark:bg-[#212121]/90 backdrop-blur-md z-[1000] py-3">
+             class="h-full w-full fixed overflow-hidden top-0 left-0 right-0 bottom-0 flex items-start md:items-center justify-center bg-white/80 dark:bg-[#212121]/90 backdrop-blur-md z-[1000] py-3">
           <div
               v-if="!state.submitted"
               class="absolute right-0 top-0 md:left-auto md:right-auto p-3 w-full md:max-w-[400px] mx-auto flex items-end">
@@ -201,6 +203,11 @@ const sendMessage = async () => {
   </header>
 </template>
 
+<style>
+html {
+  @apply m-0 h-full overflow-hidden;
+}
+</style>
 <style module="header">
 .root {
   @apply flex items-center p-3 w-full md:max-w-[440px] md:mx-auto gap-4;
@@ -208,9 +215,5 @@ const sendMessage = async () => {
   & > a {
     @apply opacity-70 hover:opacity-100 transition-all;
   }
-}
-
-input, textarea {
-
 }
 </style>
