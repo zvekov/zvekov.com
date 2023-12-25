@@ -9,7 +9,6 @@ useSeoMeta({
 </script>
 <template>
   <main :class="index.root">
-    {{ data }}
     <nuxt-img src="https://avatars.githubusercontent.com/u/39777699" format="webp" alt="Yury Zvekau"/>
     <h1>Yury Zvekau</h1>
     <span>Frontend developer</span>
