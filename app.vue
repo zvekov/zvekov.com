@@ -20,6 +20,6 @@ useHead({
 </template>
 <style module="app">
 .root {
-  @apply flex flex-col h-screen;
+  @apply flex flex-col h-[100svh];
 }
 </style>
