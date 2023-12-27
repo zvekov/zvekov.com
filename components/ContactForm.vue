@@ -52,14 +52,14 @@ onMounted(() => {
       class="h-full w-full fixed overflow-hidden top-0 left-0 right-0 bottom-0 flex items-start md:items-center justify-center bg-white/80 dark:bg-[#212121]/90 backdrop-blur-md z-[1000] py-3">
     <div
         v-if="!state.submitted"
-        class="absolute right-0 top-0 md:left-auto md:right-auto p-3 w-full md:max-w-[400px] mx-auto flex items-end">
+        :class="contact.header">
       <button
           @click="closeModal"
-          class="ml-auto px-3 py-1 text-sm border border-solid rounded-md text-black/70 hover:border-black hover:text-black dark:text-white/70 dark:hover:text-white dark:hover:border-white transition-all">
+          class="px-3 py-1 text-sm border border-solid rounded-md text-black/70 hover:border-black hover:text-black dark:text-white/70 dark:hover:text-white dark:hover:border-white transition-all">
         Cancel
       </button>
     </div>
-    <div class="h-fit flex flex-col items-center gap-3 w-full md:max-w-[400px] px-3 h-full md:justify-center">
+    <div :class="contact.root">
       <template v-if="state.error">
         <div>
           <div class="w-full text-center pb-4">
@@ -171,3 +171,17 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style module="contact">
+.root {
+  @apply h-fit flex flex-col items-center gap-3 w-full md:max-w-[400px] px-3 h-full md:justify-center;
+}
+
+.header {
+  @apply absolute right-0 top-0 md:left-auto md:right-auto p-3 w-full md:max-w-[400px] mx-auto flex items-end;
+
+  & > button {
+    @apply ml-auto;
+  }
+}
+</style>
