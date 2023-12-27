@@ -44,7 +44,7 @@ html {
 </style>
 <style module="header">
 .root {
-  @apply flex items-center p-3 w-full md:max-w-[440px] md:mx-auto gap-4;
+  @apply flex items-center p-3 w-full md:max-w-[400px] md:mx-auto gap-4;
 
   & > a {
     @apply opacity-70 hover:opacity-100 transition-all;
