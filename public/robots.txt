@@ -1,0 +1,4 @@
+User-agent: *
+
+Host: https://zvekov.com
+Sitemap: https://zvekov.com/sitemap.xml

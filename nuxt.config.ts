@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     modules: [
         "@nuxt/ui",
         "@nuxt/image",
-        "@nuxtjs/tailwindcss"
+        "@nuxtjs/tailwindcss",
+        "nuxt-simple-sitemap"
     ],
     image: {
         domains: ["avatars.githubusercontent.com"]
@@ -37,6 +38,9 @@ export default defineNuxtConfig({
         define: {
             "process.browser": {},
         },
+    },
+    sitemap: {
+        autoLastmod: true,
     },
     experimental: {
         // asyncEntry: true,
