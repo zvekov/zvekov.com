@@ -21,6 +21,11 @@ export default defineNuxtConfig({
     routeRules: {
         "/": {prerender: true},
     },
+    runtimeConfig: {
+        "api": {
+            telegramBotToken: import.meta.env.VITE_TELEGRAM_BOT_TOKEN,
+        }
+    },
     vite: {
         logLevel: "info",
         optimizeDeps: {

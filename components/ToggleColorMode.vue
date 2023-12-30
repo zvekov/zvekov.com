@@ -15,7 +15,7 @@ const toggleColorMode = () => {
 }
 </script>
 <template>
-  <button @click="toggleColorMode">
+  <button @click="toggleColorMode" class="flex items-center justify-center">
     <UIcon :name="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun'" class="w-6 h-6"/>
   </button>
 </template>

@@ -28,7 +28,9 @@ const defaultState: TDefaultState = {
 }
 const state = ref<TDefaultState>(JSON.parse(JSON.stringify(defaultState)));
 const isValidForm = computed<boolean>(() => {
-  return state.value.message.length >= 70 && state.value.name.length > 2 && state.value.contactMethod.length > 0 && state.value.contactMethodValue.length > 3;
+  return state.value.message.length >= 70
+      && state.value.name.length >= 3
+      && state.value.contactMethodValue.length >= (state.value.contactMethod === 'Telegram' ? 5 : 6);
 })
 const sendMessage = async () => {
   const message = 'New message from website:\n\n' +
@@ -154,8 +156,8 @@ onMounted(() => {
           <div class="flex items-center justify-between pt-1 opacity-70">
                   <span
                       class="text-black/70 dark:text-white/70 text-[10px] leading-none"
-                      v-if="state.contactMethodValue.length < (state.contactMethod === 'Telegram' ? 4 : 6)">Minimum {{
-                      state.contactMethod === 'Telegram' ? 4 : 6
+                      v-if="state.contactMethodValue.length < (state.contactMethod === 'Telegram' ? 5 : 6)">Minimum {{
+                      state.contactMethod === 'Telegram' ? 5 : 6
                     }} characters</span>
             <span class="text-black/70 dark:text-white/70 text-[10px] leading-none ml-auto">{{
                 state.contactMethodValue.length

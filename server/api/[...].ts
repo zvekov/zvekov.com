@@ -4,9 +4,10 @@ const router = createRouter();
 
 router.post('/message', defineEventHandler({
     async handler(event: H3Event) {
+        const config = useRuntimeConfig(event);
         try {
             const body = await readBody(event);
-            const token = '6893497355:AAFiVWEyVT8wfLfHABYziFkDUPWFz73ikbw';
+            const token = config.api.telegramBotToken;
             const url = `https://api.telegram.org/bot${token}/sendMessage`;
             const result = await $fetch(url, {
                 method: 'POST',
