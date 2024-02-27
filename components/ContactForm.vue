@@ -42,7 +42,7 @@ const sendMessage = async () => {
       (isContactMethod.value === 'Telegram' ? "@" : "") +
       (isContactMethod.value === 'Telegram' ? telegram.value.value : email.value.value);
 
-    await telegramSendMessage(messageTg).then(() => {
+  await telegramSendMessage(messageTg).then(() => {
     setSubmit(true);
   }).catch(() => {
     setError('Something went wrong. Please try again.');
@@ -56,7 +56,7 @@ onMounted(() => {
 
 <template>
   <div
-      :class="contact.root">
+      :class="contact.root" class="bg-white/80 dark:bg-[#212121]/90 backdrop-blur-md">
     <div
         v-if="!isSubmit"
         :class="contact.header">
@@ -201,8 +201,9 @@ onMounted(() => {
 
 <style module="contact">
 .root {
-  @apply h-full w-full fixed overflow-hidden top-0 left-0 right-0 bottom-0 flex items-start md:items-center justify-center bg-white/80 dark:bg-[#212121]/90 backdrop-blur-md z-[1000] py-3;
+  @apply h-full w-full fixed overflow-hidden top-0 left-0 right-0 bottom-0 flex items-start md:items-center justify-center z-[1000] py-3;
 }
+
 .content {
   @apply h-fit flex flex-col items-center gap-3 w-full md:max-w-[400px] px-3 h-full md:justify-center;
 }
